@@ -1,0 +1,10 @@
+{
+    "afah" : {
+        "launch-dir" : "./games/afah",
+        "launch-command" : "wine afah.exe"
+    },
+    "evngelic" : {
+        "launch-dir" : "./games/evngelic",
+        "launch-command" : "./eVNgelic.sh"
+    }
+}

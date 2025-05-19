@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import asyncio
+import json
 import websockets
 import subprocess
 import os
@@ -14,14 +15,23 @@ class JamVendorServer:
     def __init__(self):
         self.process = None
         self.process_lock = asyncio.Lock()
+        with open("games.json", "r") as f:
+            self.games = json.loads(f.read())
+            print(f"Found {len(self.games.keys())} games!")
+
+    def get_cmd(self, game_name):
+        if game_name not in self.games.keys():
+            return None
+        game = self.games[game_name]
+        return f"cd {game['launch-dir']} && {game['launch-command']}"
 
     async def start(self, cmd):
         async with self.process_lock:
             print("Starting App.")
             self.process = subprocess.Popen(
                 cmd,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                # stdout=subprocess.PIPE,
+                # stderr=subprocess.PIPE,
                 shell=True,
                 preexec_fn=os.setsid,
             )
@@ -39,7 +49,11 @@ class JamVendorServer:
                 game = message.split(" ")[-1]
                 print(game)
                 await self.kill()
-                await self.start("cd ~/Games/df && wine Dwarf\\ Fortress.exe")
+                cmd = self.get_cmd(game)
+                if cmd:
+                    await self.start(cmd)
+                else:
+                    print(f"Can't find '{game}' :(")
             if message.startswith("quit"):
                 await self.kill()
 
