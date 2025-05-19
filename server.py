@@ -13,15 +13,24 @@ class JamVendorServer:
 
     def __init__(self):
         self.process = None
+        self.process_lock = asyncio.Lock()
 
-    def start(self, cmd):
-        self.process = subprocess.Popen(
-            cmd, stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid
-        )
+    async def start(self, cmd):
+        async with self.process_lock:
+            print("Starting App.")
+            self.process = subprocess.Popen(
+                cmd,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                shell=True,
+                preexec_fn=os.setsid,
+            )
 
-    def kill(self):
-        if self.process is not None:
-            os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
+    async def kill(self):
+        async with self.process_lock:
+            if self.process is not None:
+                print("Killing App.")
+                os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
 
     async def handler(self, websocket):
         async for message in websocket:
@@ -29,17 +38,21 @@ class JamVendorServer:
             if message.startswith("launch "):
                 game = message.split(" ")[-1]
                 print(game)
-                self.kill()
-                # self.start("cd ~/Games/df && wine Dwarf\\ Fortress.exe")
+                await self.kill()
+                await self.start("cd ~/Games/df && wine Dwarf\\ Fortress.exe")
             if message.startswith("quit"):
-                self.kill()
+                await self.kill()
 
-    # TODO somehow run this once every 10 seconds, asynchrounously so as not to
-    # block the message handling
+    async def check_loop(self):
+        while True:
+            await self.check()
+            await asyncio.sleep(10)
+
     async def check(self):
-        time = self.get_idle_time()
-        if time > 1000 * 60 * 2:
-            self.kill()
+        idle_time_ms = self.get_idle_time()
+        print(f"Running check.  Time is {idle_time_ms / 1000} seconds")
+        if idle_time_ms > 1000 * 10:
+            await self.kill()
 
     def get_idle_time(self):
         p = subprocess.Popen("xprintidle", stdout=subprocess.PIPE)
@@ -51,6 +64,7 @@ class JamVendorServer:
 
 async def main():
     server = JamVendorServer()
+    asyncio.create_task(server.check_loop())
     async with websockets.serve(server.handler, "127.0.0.1", 1312):
         await asyncio.Future()
 
