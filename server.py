@@ -2,6 +2,7 @@
 
 import asyncio
 import json
+import psutil
 import websockets
 import subprocess
 import os
@@ -43,6 +44,9 @@ class JamVendorServer:
         else:
             print(f"Can't find '{game}' :(")
 
+    async def on_closed(self):
+        print("Game was closed")
+
     async def kill(self):
         async with self.process_lock:
             if self.process is not None:
@@ -70,6 +74,10 @@ class JamVendorServer:
         print(f"Running check.  Time is {idle_time_ms / 1000} seconds")
         if idle_time_ms > 1000 * 10:
             await self.kill()
+
+        # TODO does not work for <defunct>
+        if self.process and not psutil.pid_exists(self.process.pid):
+            await self.on_closed()
 
     def get_idle_time(self):
         p = subprocess.Popen("xprintidle", stdout=subprocess.PIPE)
