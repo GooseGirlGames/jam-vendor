@@ -36,6 +36,13 @@ class JamVendorServer:
                 preexec_fn=os.setsid,
             )
 
+    async def start_game(self, game):
+        cmd = self.get_cmd(game)
+        if cmd:
+            await self.start(cmd)
+        else:
+            print(f"Can't find '{game}' :(")
+
     async def kill(self):
         async with self.process_lock:
             if self.process is not None:
@@ -49,18 +56,14 @@ class JamVendorServer:
                 game = message.split(" ")[-1]
                 print(game)
                 await self.kill()
-                cmd = self.get_cmd(game)
-                if cmd:
-                    await self.start(cmd)
-                else:
-                    print(f"Can't find '{game}' :(")
+                await self.start_game(game)
             if message.startswith("quit"):
                 await self.kill()
 
     async def check_loop(self):
         while True:
             await self.check()
-            await asyncio.sleep(10)
+            await asyncio.sleep(1)
 
     async def check(self):
         idle_time_ms = self.get_idle_time()
@@ -76,12 +79,11 @@ class JamVendorServer:
         return 0
 
 
-async def main():
-    server = JamVendorServer()
+async def main(server):
     asyncio.create_task(server.check_loop())
     async with websockets.serve(server.handler, "127.0.0.1", 1312):
         await asyncio.Future()
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main(JamVendorServer()))

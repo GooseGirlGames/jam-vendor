@@ -5,7 +5,8 @@
         "short-description": "gamer",
         "description": "gaminggggggggggggggggggggggggggg fdajfkl a ajslkdfj lkasdjf lkasjdflka sjdflajs lkfjaklsd",
         "launch-dir" : "./games/afah",
-        "launch-command" : "wine afah.exe"
+        "launch-command" : "wine afah.exe",
+        "window-class": "afah"
     },
     "evngelic" : {
         "display-name": "eVNgelic",
@@ -13,6 +14,7 @@
         "short-description": "gamer",
         "description": "gaminggggggggggggggggggggggggggg fdajfkl a ajslkdfj lkasdjf lkasjdflka sjdflajs lkfjaklsd",
         "launch-dir" : "./games/evngelic",
-        "launch-command" : "./eVNgelic.sh"
+        "launch-command" : "./eVNgelic.sh",
+        "window-class": "eVNgelic"
     }
 }
