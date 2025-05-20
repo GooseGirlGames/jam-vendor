@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>Bauhaus Game Jam</title>
+    <style>
+        body {
+            font-family: mono;
+        }
+    </style>
+</head>
+<body>
+    <div id="overview">
+        <a><h1>Bauhaus Game Jam</h1></a>
+        <ul id="games">
+        </ul>
+    </div>
+    <div id="detail">
+        <a href="#"><h1>Bauhaus Game Jam</h1></a>
+        <h2 id="display-name">display-name</h2>
+        <p id="description">description</p>
+        <p><i id="created-by">created-by</i></p>
+        <button id="launch-button">Launch!</button>
+    </div>
+
+    <script>
+        const addr = "ws://127.0.0.1:1312";
+        let socket = null;
+        const list_games = document.getElementById("games");
+        const div_overview = document.getElementById("overview");
+        const div_detail = document.getElementById("detail");
+        let ready = false;
+        let games = null;
+
+        function addGames(games) {
+            for (const [k, v] of Object.entries(games)) {
+                let game_html = `
+                    <li>
+                    <h2><a href="#${k}" onclick="sendCommand('DONT launch ${k}')">${v["display-name"]}</a></h2>
+                    <p>${v["short-description"]}
+                    </p>
+                    <p><i>created by ${v["creators"]}</i></p>
+                    </li>
+                `;
+                list_games.innerHTML += game_html;
+            }
+        }
+
+        function setupSite() {
+            fetch("/games.json")
+                .then(res => res.json())
+                .then(out => {
+                    games = out;
+                    addGames(out);
+                })
+                .catch(err => console.log(err));
+        }
+
+        function setupSocket() {
+            socket.onopen = () => {
+                console.log("Connected to WebSocket server.");
+            };
+
+            socket.onmessage = (event) => {
+            };
+
+            socket.onclose = () => {
+                console.log("WebSocket closed.");
+            };
+
+            socket.onerror = (error) => {
+                console.error("WebSocket error:", error);
+                socket.close(); // Ensure the socket is closed on error
+            };
+        }
+
+        function sendCommand(cmd) {
+            if (socket.readyState === WebSocket.OPEN) {
+                socket.send(cmd);
+                console.log(`Command sent: ${cmd}`);
+            } else {
+                console.log("WebSocket not connected.");
+            }
+        }
+
+        function checkHealth() {
+            console.log("Health?");
+
+            if (!socket || socket.readyState !== WebSocket.OPEN) {
+                if (socket) {
+                    socket.close();
+                }
+                console.log("Creating new WebSocket connection...");
+                socket = new WebSocket(addr);
+                setupSocket();
+            }
+        }
+
+        function updateUI() {
+            let game = window.location.hash.substring(1);
+            if (game == "") {
+                div_overview.style.display = "block";
+                div_detail.style.display = "none";
+            } else {
+                div_overview.style.display = "none";
+                div_detail.style.display = "block";
+                document.getElementById("display-name").innerHTML = games[game]["display-name"];
+                document.getElementById("description").innerHTML = games[game]["description"];
+                document.getElementById("created-by").innerHTML = "created by " + games[game]["creators"];
+                document.getElementById("launch-button").onclick = () => {
+                    sendCommand(`launch ${game}`);
+                    setTimeout(() => {window.location.href = "#"}, 2500);
+                }
+            }
+        }
+
+        setupSite();
+        updateUI();
+        checkHealth();
+        setInterval(checkHealth, 1000);
+
+        window.addEventListener("popstate", ev => {
+            updateUI();
+        });
+    </script>
+</body>
+</html>
+

@@ -1,9 +1,17 @@
 {
     "afah" : {
+        "display-name": "AFAH",
+        "creators": "lizardsss",
+        "short-description": "gamer",
+        "description": "gaminggggggggggggggggggggggggggg fdajfkl a ajslkdfj lkasdjf lkasjdflka sjdflajs lkfjaklsd",
         "launch-dir" : "./games/afah",
         "launch-command" : "wine afah.exe"
     },
     "evngelic" : {
+        "display-name": "eVNgelic",
+        "creators": "mias und lotte",
+        "short-description": "gamer",
+        "description": "gaminggggggggggggggggggggggggggg fdajfkl a ajslkdfj lkasdjf lkasjdflka sjdflajs lkfjaklsd",
         "launch-dir" : "./games/evngelic",
         "launch-command" : "./eVNgelic.sh"
     }
