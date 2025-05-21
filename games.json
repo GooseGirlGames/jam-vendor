@@ -16,5 +16,14 @@
         "launch-dir" : "./games/evngelic",
         "launch-command" : "./eVNgelic.sh",
         "window-class": "eVNgelic"
+    },
+    "vkcube" : {
+        "display-name": "VKCube",
+        "creators": "khronos i guess",
+        "short-description": "gamer",
+        "description": "gaminggggggggggggggggggggggggggg fdajfkl a ajslkdfj lkasdjf lkasjdflka sjdflajs lkfjaklsd",
+        "launch-dir" : ".",
+        "launch-command" : "vkcube",
+        "window-class": "vkcube"
     }
 }

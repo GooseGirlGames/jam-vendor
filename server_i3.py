@@ -8,6 +8,7 @@ import i3ipc
 class JamVendorServer_i3wm(JamVendorServer):
     i3: i3ipc.Connection
     visual: LaunchedApp | None
+    info: LaunchedApp | None
 
     def __init__(self):
         super().__init__()
@@ -42,10 +43,14 @@ class JamVendorServer_i3wm(JamVendorServer):
                     await self.kill_game()
                     await self.start_visual()
             except ProcessLookupError:
+                if self.info:
+                    await self.info.kill()
                 await self.start_visual()
 
     async def kill_game(self):
         await super().kill_game()
+        if self.info:
+            await self.info.kill()
         if not self.visual:
             await self.start_visual()
 
@@ -54,6 +59,8 @@ class JamVendorServer_i3wm(JamVendorServer):
         await super().start_game(game)
         self.visual = None
         self.window_class_to_move = self.games[game]["window-class"]
+        self.info = LaunchedApp("firefox https://example.com/")
+        await self.info.start()
 
 
 if __name__ == "__main__":
