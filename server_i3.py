@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-from server import JamVendorServer, main
+from server import JamVendorServer, main, LaunchedApp
 import asyncio
 import i3ipc
 
 
 class JamVendorServer_i3wm(JamVendorServer):
     i3: i3ipc.Connection
-    visual_active = False
+    visual: LaunchedApp | None
 
     def __init__(self):
         super().__init__()
@@ -16,8 +16,8 @@ class JamVendorServer_i3wm(JamVendorServer):
         asyncio.run(self.start_visual())
 
     async def start_visual(self):
-        self.visual_active = True
-        await self.start("glxgears")
+        self.visual = LaunchedApp("glxgears")
+        await self.visual.start()
         self.window_class_to_move = "glxgears"
 
     async def check(self):
@@ -30,21 +30,21 @@ class JamVendorServer_i3wm(JamVendorServer):
             self.i3.command(
                 f'[title="{self.window_class_to_move}"] move to workspace Game'
             )
-            if self.visual_active:
+            if self.visual:
                 selector = f'[title="{self.window_class_to_move}"]'
                 self.i3.command(f"{selector} floating enable")
                 self.i3.command(f"{selector} move position 0 0")
             self.window_class_to_move = None
 
-    async def kill(self):
-        await super().kill()
-        if not self.visual_active:
+    async def kill_game(self):
+        await super().kill_game()
+        if not self.visual:
             await self.start_visual()
 
     async def start_game(self, game):
         self.i3.command("workspace Game")
         await super().start_game(game)
-        self.visual_active = False
+        self.visual = None
         self.window_class_to_move = self.games[game]["window-class"]
 
 

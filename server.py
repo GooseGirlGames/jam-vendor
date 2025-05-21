@@ -15,7 +15,7 @@ class LaunchedApp:
         self.process_lock = asyncio.Lock()
 
     def __del__(self):
-        pass
+        self.send_sigterm()
 
     async def start(self):
         async with self.process_lock:
@@ -28,9 +28,13 @@ class LaunchedApp:
 
     async def kill(self):
         async with self.process_lock:
-            if self.process is not None:
-                print("Killing App.")
-                os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
+            print("Killing App.")
+            self.send_sigterm()
+
+    def send_sigterm(self):
+        if self.process is not None:
+            os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
+            self.process = None
 
 
 class JamVendorServer:
