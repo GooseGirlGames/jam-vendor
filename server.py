@@ -2,20 +2,43 @@
 
 import asyncio
 import json
-import psutil
 import websockets
 import subprocess
 import os
 import signal
 
-lock = asyncio.Lock()
+
+class LaunchedApp:
+    def __init__(self, cmd):
+        self.cmd = cmd
+        self.process = None
+        self.process_lock = asyncio.Lock()
+
+    def __del__(self):
+        pass
+
+    async def start(self):
+        async with self.process_lock:
+            print("Starting App.")
+            self.process = subprocess.Popen(
+                self.cmd,
+                shell=True,
+                preexec_fn=os.setsid,
+            )
+
+    async def kill(self):
+        async with self.process_lock:
+            if self.process is not None:
+                print("Killing App.")
+                os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
 
 
 class JamVendorServer:
 
+    app: LaunchedApp | None
+
     def __init__(self):
-        self.process = None
-        self.process_lock = asyncio.Lock()
+        self.app = None
         with open("games.json", "r") as f:
             self.games = json.loads(f.read())
             print(f"Found {len(self.games.keys())} games!")
@@ -26,32 +49,21 @@ class JamVendorServer:
         game = self.games[game_name]
         return f"cd {game['launch-dir']} && {game['launch-command']}"
 
-    async def start(self, cmd):
-        async with self.process_lock:
-            print("Starting App.")
-            self.process = subprocess.Popen(
-                cmd,
-                # stdout=subprocess.PIPE,
-                # stderr=subprocess.PIPE,
-                shell=True,
-                preexec_fn=os.setsid,
-            )
-
     async def start_game(self, game):
         cmd = self.get_cmd(game)
         if cmd:
-            await self.start(cmd)
+            self.app = LaunchedApp(cmd)
+            await self.app.start()
         else:
             print(f"Can't find '{game}' :(")
 
+    async def kill_game(self):
+        if self.app:
+            await self.app.kill()
+            self.app = None
+
     async def on_closed(self):
         print("Game was closed")
-
-    async def kill(self):
-        async with self.process_lock:
-            if self.process is not None:
-                print("Killing App.")
-                os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
 
     async def handler(self, websocket):
         async for message in websocket:
@@ -59,10 +71,11 @@ class JamVendorServer:
             if message.startswith("launch "):
                 game = message.split(" ")[-1]
                 print(game)
-                await self.kill()
+                if self.app:
+                    await self.kill_game()
                 await self.start_game(game)
-            if message.startswith("quit"):
-                await self.kill()
+            if message.startswith("quit") and self.app:
+                await self.kill_game()
 
     async def check_loop(self):
         while True:
@@ -70,14 +83,11 @@ class JamVendorServer:
             await asyncio.sleep(1)
 
     async def check(self):
-        idle_time_ms = self.get_idle_time()
-        print(f"Running check.  Time is {idle_time_ms / 1000} seconds")
-        if idle_time_ms > 1000 * 10:
-            await self.kill()
-
-        # TODO does not work for <defunct>
-        if self.process and not psutil.pid_exists(self.process.pid):
-            await self.on_closed()
+        if self.app:
+            idle_time_ms = self.get_idle_time()
+            print(f"Running check.  Time is {idle_time_ms / 1000} seconds")
+            if idle_time_ms > 1000 * 10:
+                await self.app.kill()
 
     def get_idle_time(self):
         p = subprocess.Popen("xprintidle", stdout=subprocess.PIPE)
