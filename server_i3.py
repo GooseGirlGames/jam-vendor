@@ -35,6 +35,14 @@ class JamVendorServer_i3wm(JamVendorServer):
                 self.i3.command(f"{selector} floating enable")
                 self.i3.command(f"{selector} move position 0 0")
             self.window_class_to_move = None
+        if not self.visual and self.app and self.app.process:
+            print("meow")
+            try:
+                if self.app.process.poll() is not None:
+                    await self.kill_game()
+                    await self.start_visual()
+            except ProcessLookupError:
+                await self.start_visual()
 
     async def kill_game(self):
         await super().kill_game()
