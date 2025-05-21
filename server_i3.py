@@ -59,7 +59,9 @@ class JamVendorServer_i3wm(JamVendorServer):
         await super().start_game(game)
         self.visual = None
         self.window_class_to_move = self.games[game]["window-class"]
-        self.info = LaunchedApp("firefox https://example.com/")
+        self.info = LaunchedApp(
+            f"chromium --kiosk {self.games[game]['itch-url']}"
+        )
         await self.info.start()
 
 

@@ -33,8 +33,10 @@ class LaunchedApp:
 
     def send_sigterm(self):
         if self.process is not None:
-            os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
-            self.process = None
+            try:
+                os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
+            finally:
+                self.process = None
 
 
 class JamVendorServer:
@@ -91,7 +93,7 @@ class JamVendorServer:
             idle_time_ms = self.get_idle_time()
             print(f"Running check.  Time is {idle_time_ms / 1000} seconds")
             if idle_time_ms > 1000 * 10:
-                await self.app.kill()
+                await self.kill_game()
 
     def get_idle_time(self):
         p = subprocess.Popen("xprintidle", stdout=subprocess.PIPE)

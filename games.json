@@ -6,7 +6,8 @@
         "description": "gaminggggggggggggggggggggggggggg fdajfkl a ajslkdfj lkasdjf lkasjdflka sjdflajs lkfjaklsd",
         "launch-dir" : "./games/afah",
         "launch-command" : "wine afah.exe",
-        "window-class": "afah"
+        "window-class": "afah",
+        "itch-url": "https://example.com"
     },
     "evngelic" : {
         "display-name": "eVNgelic",
@@ -15,7 +16,8 @@
         "description": "gaminggggggggggggggggggggggggggg fdajfkl a ajslkdfj lkasdjf lkasjdflka sjdflajs lkfjaklsd",
         "launch-dir" : "./games/evngelic",
         "launch-command" : "./eVNgelic.sh",
-        "window-class": "eVNgelic"
+        "window-class": "eVNgelic",
+        "itch-url": "https://example.com"
     },
     "vkcube" : {
         "display-name": "VKCube",
@@ -24,6 +26,7 @@
         "description": "gaminggggggggggggggggggggggggggg fdajfkl a ajslkdfj lkasdjf lkasjdflka sjdflajs lkfjaklsd",
         "launch-dir" : ".",
         "launch-command" : "vkcube",
-        "window-class": "vkcube"
+        "window-class": "vkcube",
+        "itch-url": "https://example.com"
     }
 }
