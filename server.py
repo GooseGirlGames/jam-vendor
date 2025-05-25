@@ -7,6 +7,8 @@ import subprocess
 import os
 import signal
 
+TIMEOUT_MINUTES = 2.5
+
 
 class LaunchedApp:
     def __init__(self, cmd):
@@ -92,7 +94,7 @@ class JamVendorServer:
         if self.app:
             idle_time_ms = self.get_idle_time()
             print(f"Running check.  Time is {idle_time_ms / 1000} seconds")
-            if idle_time_ms > 1000 * 10:
+            if idle_time_ms > 1000 * 60 * TIMEOUT_MINUTES:
                 await self.kill_game()
 
     def get_idle_time(self):
