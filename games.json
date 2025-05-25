@@ -6,7 +6,7 @@
         "short-description": "",
         "description": "",
         "launch-dir" : "./games/evngelic/eVNgelic-0.9a-pc",
-        "launch-command" : "./eVNgelic.py",
+        "launch-command" : "./eVNgelic.sh",
         "window-class": "",
         "itch-url": "https://jreeee.itch.io/evngelic",
         "image" : "https://img.itch.zone/aW1hZ2UvMzQ3MTIyNC8yMDcyOTE1Ny5wbmc=/original/PYApel.png",

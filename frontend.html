@@ -8,6 +8,11 @@
         body {
             font-family: mono;
         }
+        ul {
+          columns: 3;
+          -webkit-columns: 3;
+          -moz-columns: 3;
+        }
     </style>
 </head>
 <body>
@@ -15,13 +20,15 @@
         <a><h1>Bauhaus Game Jam</h1></a>
         <ul id="games">
         </ul>
+        <img style="height: 256px;" id="hover-image" src="#"></img>
     </div>
     <div id="detail">
         <a href="#"><h1>Bauhaus Game Jam</h1></a>
         <h2 id="display-name">display-name</h2>
         <p id="description">description</p>
         <p><i id="created-by">created-by</i></p>
-        <button id="launch-button">Launch!</button>
+        <p><button id="launch-button"><h3>&nbsp;Launch!&nbsp;</h3></button></p>
+        <img style="height: 512px;" id="image" src="#"></img>
     </div>
 
     <script>
@@ -37,14 +44,24 @@
             for (const [k, v] of Object.entries(games)) {
                 let game_html = `
                     <li>
-                    <h2><a href="#${k}" onclick="sendCommand('DONT launch ${k}')">${v["display-name"]}</a></h2>
+                    <h2><a
+                        href="#${k}"
+                        onmouseover="updateImage('${v['image']}')"
+                        onmouseleave="updateImage('#')"
+                        onclick="sendCommand('DONT launch ${k}')">
+                    ${v["display-name"]}</a></h2>
                     <p>${v["short-description"]}
                     </p>
-                    <p><i>created by ${v["creators"]}</i></p>
+                    <p><i>${v["creators"]}, ${v["year"]}</i></p>
                     </li>
                 `;
                 list_games.innerHTML += game_html;
             }
+        }
+
+        function updateImage(src) {
+            console.log("srccc" + src);
+            document.getElementById("hover-image").src = src;
         }
 
         function setupSite() {
@@ -102,12 +119,15 @@
             if (game == "") {
                 div_overview.style.display = "block";
                 div_detail.style.display = "none";
+                document.getElementById("image").src = "#";  // clear image
             } else {
                 div_overview.style.display = "none";
                 div_detail.style.display = "block";
-                document.getElementById("display-name").innerHTML = games[game]["display-name"];
+                const g = games[game];
+                document.getElementById("display-name").innerHTML = `${g["display-name"]} (${g["year"]})`;
                 document.getElementById("description").innerHTML = games[game]["description"];
                 document.getElementById("created-by").innerHTML = "created by " + games[game]["creators"];
+                document.getElementById("image").src = games[game]["image"];
                 document.getElementById("launch-button").onclick = () => {
                     sendCommand(`launch ${game}`);
                     setTimeout(() => {window.location.href = "#"}, 2500);
