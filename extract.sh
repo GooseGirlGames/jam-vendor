@@ -7,9 +7,10 @@ function extract() {
     echo "extracting $1..."
     zipfile=$(jq --raw-output ".$game.zipfile" < games.json)
     cd $GAME_DIR
-    if [ ! -d "$game" ]; then
+    if [ ! -d "$GAME_DIR/$game" ]; then
         unzip -d "$game" "$zipfile"
     fi
+    cd ..
 }
 
 games=$(jq --raw-output "keys[]" < games.json)
