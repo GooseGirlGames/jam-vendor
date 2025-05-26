@@ -8,7 +8,7 @@ function extract() {
     zipfile=$(jq --raw-output ".$game.zipfile" < games.json)
     cd $GAME_DIR
     if [ ! -d "$GAME_DIR/$game" ]; then
-        unzip -d "$game" "$zipfile"
+        unzip -n -d "$game" "$zipfile"
     fi
     cd ..
 }

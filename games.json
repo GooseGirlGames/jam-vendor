@@ -104,14 +104,14 @@
         "year": 2025,
         "short-description": "",
         "description": "",
-        "launch-dir" : "./games/bauhain/hausjaingame",
-        "launch-command" : "./haaaaaus.x86_64",
+        "launch-dir" : "./games/bauhain/build/Bauhain-a7942aa-linux",
+        "launch-command" : "./Bauhain",
         "window-class": "",
         "itch-url": "https://loveandlizards.itch.io/bauhain",
         "images" : [
             "https://img.itch.zone/aW1nLzIwNzEwMjQ0LnBuZw==/original/0feQSS.png"
         ],
-        "zipfile": "hausjaingame.zip"
+        "zipfile": "Bauhain-a7942aa-linux.zip"
     },
     "babahaus" : {
         "display-name": "Baba Haus",
