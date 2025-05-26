@@ -16,6 +16,9 @@ a simple html frontend is provided.  launch a python-webserver with
 `python -m http.server` and navigate to
 http://127.0.0.1:1337/frontend.html.
 
+<a href="img/vendor-main.webp"><img width="49%" src="img/vendor-main.webp"></img></a>
+<a href="img/vendor-detail.webp"><img width="49%" src="img/vendor-detail.webp"></img></a>
+
 <hr/>
 <div align="center">
     <i>made with 🪿 by GooseGirlGames</i>
