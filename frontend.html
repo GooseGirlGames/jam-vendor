@@ -20,6 +20,7 @@
         }
         li {
             margin-bottom: 1em;
+            animation: rotate-small 1.2s ease-in-out alternate infinite;
         }
         a:link, a:visited {
             color: #03e;
@@ -52,12 +53,16 @@
             width: 65%;
             float: left;
         }
-        #game-info-side {
+        .side {
             margin-top: 1em;
             margin-right: 1em;
             width: 32%;
             display: inline;
             float: right;
+            animation: rotate-small 1.2s ease-in-out alternate infinite;
+        }
+        #jam-info-side {
+            margin-top: 1em;
         }
 
         @keyframes rotate {
@@ -67,6 +72,12 @@
         .rotating {
             animation: rotate 0.4s ease-in-out alternate infinite;
         }
+
+        @keyframes rotate-small {
+            from { transform: rotate(-0.5deg); }
+            to { transform: rotate(0.5deg); }
+        }
+
         #launch-button {
             font-size: 52px;
             padding: 0.25em;
@@ -83,10 +94,24 @@
             <ul id="games">
             </ul>
         </div>
-        <div id="game-info-side" class="game-tile">
-            <h1 id="display-name-side"></h2>
-            <img style="width: 80%;" id="hover-image" src="#"></img>
-            <p id="hover-description"></p>
+        <div id="jam-side" class="side">
+            <div id="jam-pics-side" class="game-tile">
+                <p>Heyyyy!! Welcome :3</p>
+                <p>Feel free to browse through and <b>play</b> all the games created during the first three Bauhaus Game Jams!</p>
+                <p>All these games were created within just 48 hours.</p>
+                <p><3</p>
+                <img width="98%" src="https://files.catbox.moe/ejdd5w.jpg"></img>
+                <i>Bauhaus Game Jam 2025 group photo</i>
+            </div>
+        </div>
+        <div id="info-side" class="side">
+            <div id="game-info-side" class="game-tile">
+                <h1 id="display-name-side"></h2>
+                <img style="width: 80%;" id="hover-image" src="#"></img>
+                <p id="hover-description"></p>
+            </div>
+            <div id="jam-info-side" class="game-tile">
+            </div>
         </div>
     </div>
     <div id="detail">
@@ -142,13 +167,16 @@
         }
 
         function updateImage(game) {
-            const side = document.getElementById("game-info-side");
+            const side = document.getElementById("info-side");
+            const other_side = document.getElementById("jam-side");
 
             if (game === "#") {
                 side.style.display = "none";
+                other_side.style.display = "block";
                 return;
             }
             side.style.display = "block";
+            other_side.style.display = "none";
 
             game = games[game];
             const src = game["images"][0];
@@ -158,6 +186,16 @@
             img.src = src;
             document.getElementById("hover-description").innerHTML = desc.replace("\n", "<br/><br/>");
             document.getElementById("display-name-side").innerHTML = game["display-name"];
+
+            const themes = {
+                2025: "Fuck around and find out",
+                2024: "Hoarding",
+                2023: "Dinos and/or Racing and/or Fish",
+            };
+            document.getElementById("jam-info-side").innerHTML = `
+                <p>Bauhaus Game Jam ${game["year"]}.
+                Theme: <b>${themes[game["year"]]}</b>.</p>
+                `;
         }
 
         function setupSite() {
