@@ -91,6 +91,7 @@ class JamVendorServer:
             await asyncio.sleep(1)
 
     async def check(self):
+        print(self.app)
         if self.app:
             idle_time_ms = self.get_idle_time()
             print(f"Running check.  Time is {idle_time_ms / 1000} seconds")

@@ -22,7 +22,7 @@
             color: #03e;
         }
         .game-tile {
-            border: 1px dashed #f0f;
+            border: 4px dashed #f0f;
             list-style-type: none;
             background-color: #fbf;
             padding-left: 1em;
@@ -38,14 +38,18 @@
             font-size: 0.5em;
         }
         .footer {
-            font-size: 0.75em;
+            font-size: 0.9em;
+            clear: both;
+            color: #666;
+            position: absolute;
+            bottom: 1em;
+            width: 95%;
         }
         #games-list {
             width: 65%;
             float: left;
         }
-        #game-info {
-            padding-top: 1em;
+        #game-info-side {
             margin-top: 1em;
             margin-right: 1em;
             width: 32%;
@@ -73,30 +77,32 @@
         <div id="games-list">
             <ul id="games">
             </ul>
-            <div class="footer" align="center">
-                <i>made with 🪿 by GooseGirlGames</i>
-            </div>
         </div>
-        <div id="game-info" class="game-tile">
+        <div id="game-info-side" class="game-tile">
+            <h1 id="display-name-side"></h2>
             <img style="width: 80%;" id="hover-image" src="#"></img>
             <p id="hover-description"></p>
         </div>
     </div>
     <div id="detail">
-        <a href="#"><h1>Bauhaus Game Jam</h1></a>
+        <a href="#"><h1>⟸ Bauhaus Game Jam</h1></a>
         <div class="game-tile">
             <div id="qrcode"></div>
             <h2 id="display-name">display-name</h2>
             <p id="description">description</p>
             <p><button id="launch-button" class="rotating">Launch!</button></p>
             <p><i id="created-by">created-by</i></p>
-            <p><a id="itch" href="#">itch</p>
+            <p><a id="itch" href="#">itch</a></p>
             <div id="images"></div>
         </div>
-        <div class="footer" align="center" style="margin-top: 2em;">
-            <i>made with 🪿 by GooseGirlGames</i>
-        </div>
     </div>
+
+    <div class="footer" align="center">
+        <i>jam-vendor made with
+        <img style="height:1em" src="/goose.webp"></img>
+        by GooseGirlGames, 2025</i>
+    </div>
+
 
     <script type="text/javascript" src="qrcode.min.js"></script>
     <script>
@@ -131,7 +137,7 @@
         }
 
         function updateImage(game) {
-            const side = document.getElementById("game-info");
+            const side = document.getElementById("game-info-side");
 
             if (game === "#") {
                 side.style.display = "none";
@@ -146,6 +152,7 @@
 
             img.src = src;
             document.getElementById("hover-description").innerHTML = desc.replace("\n", "<br/><br/>");
+            document.getElementById("display-name-side").innerHTML = game["display-name"];
         }
 
         function setupSite() {
