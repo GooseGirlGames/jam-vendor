@@ -13,14 +13,17 @@
             background-color: #fdf;
             font-size: 1.5em;
         }
-        ul {
-          columns: 3;
-          -webkit-columns: 3;
-          -moz-columns: 3;
-        }
-        li {
-            margin-bottom: 1em;
+        .game-tile-small {
+            margin: 0.5em;
             animation: rotate-small 1.2s ease-in-out alternate infinite;
+            width: 25%;
+            flex: auto;
+        }
+        .game-tile-small h2 {
+            font-size: 1.1em;
+        }
+        .game-tile-small p {
+            font-size: 0.7em;
         }
         a:link, a:visited {
             color: #03e;
@@ -32,7 +35,6 @@
             padding-left: 1em;
         }
         #detail {
-            font-size: 1.5em;
         }
         #qrcode {
             float: right;
@@ -52,6 +54,8 @@
         #games-list {
             width: 65%;
             float: left;
+            display: flex;
+            flex-wrap: wrap;
         }
         .side {
             margin-top: 1em;
@@ -79,7 +83,7 @@
         }
 
         #launch-button {
-            font-size: 52px;
+            font-size: 48px;
             padding: 0.25em;
             font-family: "Crimson Pro", "Times New Roman", serif;
             font-weight: 500;
@@ -89,13 +93,11 @@
 </head>
 <body>
     <div id="overview">
-        <a><h1>Bauhaus Game Jam</h1></a>
         <div id="games-list">
-            <ul id="games">
-            </ul>
         </div>
         <div id="jam-side" class="side">
             <div id="jam-pics-side" class="game-tile">
+                <h1>Bauhaus Game Jam</h1>
                 <p>Heyyyy!! Welcome :3</p>
                 <p>Feel free to browse through and <b>play</b> all the games created during the first three Bauhaus Game Jams!</p>
                 <p>All these games were created within just 48 hours.</p>
@@ -121,8 +123,8 @@
             <h2 id="display-name">display-name</h2>
             <p id="description">description</p>
             <p><button id="launch-button" class="rotating">Launch!</button></p>
-            <p><i id="created-by">created-by</i></p>
-            <p><a id="itch" href="#">itch</a></p>
+            <p><i id="created-by">created-by</i>&nbsp;&bullet;&nbsp;
+            available on <a id="itch" href="#">itch</a></p>
             <div id="images"></div>
         </div>
     </div>
@@ -138,7 +140,7 @@
     <script>
         const addr = "ws://127.0.0.1:1312";
         let socket = null;
-        const list_games = document.getElementById("games");
+        const list_games = document.getElementById("games-list");
         const div_overview = document.getElementById("overview");
         const div_detail = document.getElementById("detail");
         let ready = false;
@@ -148,8 +150,8 @@
         function addGames(games) {
             for (const [k, v] of Object.entries(games)) {
                 let game_html = `
-                    <li
-                        class="game-tile"
+                    <div
+                        class="game-tile game-tile-small"
                         onmouseover="updateImage('${k}')"
                         onmouseleave="updateImage('#')"
                     >
@@ -160,7 +162,7 @@
                     <span class="year">(${v["year"]})</span>
                     </h2>
                     <p><i>${v["creators"]}</i></p>
-                    </li>
+                    </div>
                 `;
                 list_games.innerHTML += game_html;
             }
@@ -193,7 +195,7 @@
                 2023: "Dinos and/or Racing and/or Fish",
             };
             document.getElementById("jam-info-side").innerHTML = `
-                <p>Bauhaus Game Jam ${game["year"]}.
+                <p>Created during Bauhaus Game Jam ${game["year"]}.
                 Theme: <b>${themes[game["year"]]}</b>.</p>
                 `;
         }
@@ -281,7 +283,7 @@
                 let images = "";
                 let i = 0;
                 for (const image of g["images"]) {
-                    let img = `<img style="height: 420px;" id="image" src="${image}"></img>&nbsp;`
+                    let img = `<img style="height: 333px;" id="image" src="${image}"></img>&nbsp;`
                     images += img;
                     i += 1;
                     if (i >= 3) {
