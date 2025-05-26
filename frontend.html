@@ -46,6 +46,8 @@
         }
         #game-info {
             padding-top: 1em;
+            margin-top: 1em;
+            margin-right: 1em;
             width: 32%;
             display: inline;
             float: right;
@@ -89,7 +91,7 @@
             <p><button id="launch-button" class="rotating">Launch!</button></p>
             <p><i id="created-by">created-by</i></p>
             <p><a id="itch" href="#">itch</p>
-            <img style="height: 512px;" id="image" src="#"></img>
+            <div id="images"></div>
         </div>
         <div class="footer" align="center" style="margin-top: 2em;">
             <i>made with 🪿 by GooseGirlGames</i>
@@ -114,7 +116,6 @@
                         class="game-tile"
                         onmouseover="updateImage('${k}')"
                         onmouseleave="updateImage('#')"
-                        onclick="sendCommand('DONT launch ${k}')"
                     >
                     <h2><a
                         href="#${k}"
@@ -139,7 +140,7 @@
             side.style.display = "block";
 
             game = games[game];
-            const src = game["image"];
+            const src = game["images"][0];
             const desc = game["description"];
             const img = document.getElementById("hover-image");
 
@@ -211,7 +212,6 @@
             if (game == "") {
                 div_overview.style.display = "block";
                 div_detail.style.display = "none";
-                document.getElementById("image").src = "#";  // clear image
             } else {
                 div_overview.style.display = "none";
                 div_detail.style.display = "block";
@@ -219,7 +219,6 @@
                 document.getElementById("display-name").innerHTML = `${g["display-name"]} (${g["year"]})`;
                 document.getElementById("description").innerHTML = games[game]["description"].replace("\n", "<br/><br/>");
                 document.getElementById("created-by").innerHTML = "created by " + games[game]["creators"];
-                document.getElementById("image").src = games[game]["image"];
                 document.getElementById("itch").href = games[game]["itch-url"];
                 document.getElementById("itch").innerHTML = games[game]["itch-url"];
                 document.getElementById("launch-button").onclick = () => {
@@ -228,6 +227,18 @@
                 }
                 qrcode.clear();
                 qrcode.makeCode(g["itch-url"]);
+
+                let images = "";
+                let i = 0;
+                for (const image of g["images"]) {
+                    let img = `<img style="height: 420px;" id="image" src="${image}"></img>&nbsp;`
+                    images += img;
+                    i += 1;
+                    if (i >= 3) {
+                        break;
+                    }
+                }
+                document.getElementById("images").innerHTML = images;
             }
         }
 
