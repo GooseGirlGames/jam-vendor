@@ -23,6 +23,9 @@
             background-color: #fbf;
             padding-left: 1em;
         }
+        .year {
+            font-size: 0.5em;
+        }
         .footer {
             font-size: 0.75em;
         }
@@ -67,6 +70,7 @@
             <p id="description">description</p>
             <p><i id="created-by">created-by</i></p>
             <p><button id="launch-button" class="rotating"><h3>&nbsp;&nbsp;Launch!&nbsp;&nbsp;</h3></button></p>
+            <p><a id="itch" href="#">itch</p>
             <img style="height: 512px;" id="image" src="#"></img>
         </div>
         <div class="footer" align="center" style="margin-top: 2em;">
@@ -95,10 +99,12 @@
                     <h2><a
                         href="#${k}"
                     >
-                    ${v["display-name"]}</a></h2>
+                    ${v["display-name"]}</a>
+                    <span class="year">(${v["year"]})</span>
+                    </h2>
                     <p>${v["short-description"]}
                     </p>
-                    <p><i>${v["creators"]}, ${v["year"]}</i></p>
+                    <p><i>${v["creators"]}</i></p>
                     </li>
                 `;
                 list_games.innerHTML += game_html;
@@ -179,6 +185,8 @@
                 document.getElementById("description").innerHTML = games[game]["description"];
                 document.getElementById("created-by").innerHTML = "created by " + games[game]["creators"];
                 document.getElementById("image").src = games[game]["image"];
+                document.getElementById("itch").href = games[game]["itch-url"];
+                document.getElementById("itch").innerHTML = games[game]["itch-url"];
                 document.getElementById("launch-button").onclick = () => {
                     sendCommand(`launch ${game}`);
                     setTimeout(() => {window.location.href = "#"}, 2500);

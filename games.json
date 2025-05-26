@@ -53,7 +53,7 @@
     },
     "potionordie" : {
         "display-name": "Potion or Die!",
-        "creators": "",
+        "creators": "Noeme, Aaron, Anne, Hannes",
         "year": 2025,
         "short-description": "",
         "description": "",
@@ -79,7 +79,7 @@
     },
     "bauhain" : {
         "display-name": "BauHain",
-        "creators": "Love & Lizards",
+        "creators": "Tarek, Paul, Jakob, Felix, Anton",
         "year": 2025,
         "short-description": "",
         "description": "",
@@ -92,7 +92,7 @@
     },
     "babahaus" : {
         "display-name": "Baba Haus",
-        "creators": "",
+        "creators": "Liv, Max, Sarah, Chris",
         "year": 2025,
         "short-description": "",
         "description": "",
@@ -105,7 +105,7 @@
     },
     "filinchen" : {
         "display-name": "Filinchen the Cat",
-        "creators": "",
+        "creators": "Karo, Jannis, Alban",
         "year": 2025,
         "short-description": "",
         "description": "",
@@ -131,7 +131,7 @@
     },
     "lust4loot" : {
         "display-name": "Lust 4 Loot",
-        "creators": "",
+        "creators": "Aaron, Daniel, Nagham, Patrick",
         "year": 2024,
         "short-description": "",
         "description": "",
@@ -144,7 +144,7 @@
     },
     "junkbot" : {
         "display-name": "Junkbot",
-        "creators": "",
+        "creators": "Valentin, Paul, Noeme",
         "year": 2024,
         "short-description": "",
         "description": "",
@@ -157,7 +157,7 @@
     },
     "afah" : {
         "display-name": "AFAH",
-        "creators": "Love & Lizards",
+        "creators": "Tarek, Jakob, Felix, Anton",
         "year": 2024,
         "short-description": "",
         "description": "",
@@ -170,7 +170,7 @@
     },
     "magpile" : {
         "display-name": "Magpile",
-        "creators": "",
+        "creators": "Max, Jannis",
         "year": 2024,
         "short-description": "",
         "description": "",
@@ -183,7 +183,7 @@
     },
     "remodeluxe" : {
         "display-name": "REMO DELUXE",
-        "creators": "",
+        "creators": "Milorico, Nils, Mica",
         "year": 2023,
         "short-description": "",
         "description": "",
@@ -196,7 +196,7 @@
     },
     "kawaiirusrex" : {
         "display-name": "Kawaiirus-REX",
-        "creators": "",
+        "creators": "Aaron, Benjamin",
         "year": 2023,
         "short-description": "",
         "description": "",
@@ -209,7 +209,7 @@
     },
     "jurassicheartthrob" : {
         "display-name": "Jurassic Heartthrob",
-        "creators": "Love & Lizards",
+        "creators": "Tarek, Fionn, Jakob, Felix, Max",
         "year": 2023,
         "short-description": "",
         "description": "",
@@ -222,7 +222,7 @@
     },
     "daddylongneck" : {
         "display-name": "DaddyLongNeck",
-        "creators": "",
+        "creators": "Jeremias, Marvin, Charlotte, Ilas, Marie",
         "year": 2023,
         "short-description": "",
         "description": "",
