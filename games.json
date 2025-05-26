@@ -62,7 +62,9 @@
         "window-class": "",
         "itch-url": "https://j0ye.itch.io/bug-around-and-find-out",
         "images" : [
-            "https://files.catbox.moe/j7roeo.png"
+            "img/bugaround1.png",
+            "img/bugaround0.png",
+            "img/bugaround2.png"
         ],
         "zipfile": null
     },
