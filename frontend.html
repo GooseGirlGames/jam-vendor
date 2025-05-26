@@ -21,6 +21,10 @@
             border: 1px dashed #f0f;
             list-style-type: none;
             background-color: #fbf;
+            padding-left: 1em;
+        }
+        .footer {
+            font-size: 0.75em;
         }
         #games-list {
             width: 66%;
@@ -31,6 +35,15 @@
             display: inline;
             float: right;
         }
+
+        @keyframes rotate {
+            from { transform: rotate(-5deg); }
+            to { transform: rotate(5deg); }
+        }
+        .rotating {
+            animation: rotate 0.4s ease-in-out alternate infinite;
+        }
+
     </style>
 </head>
 <body>
@@ -39,6 +52,9 @@
         <div id="games-list">
             <ul id="games">
             </ul>
+            <div class="footer" align="center">
+                <i>made with 🪿 by GooseGirlGames</i>
+            </div>
         </div>
         <div id="game-info">
             <img style="width: 80%;" id="hover-image" src="#"></img>
@@ -50,8 +66,11 @@
             <h2 id="display-name">display-name</h2>
             <p id="description">description</p>
             <p><i id="created-by">created-by</i></p>
-            <p><button id="launch-button"><h3>&nbsp;Launch!&nbsp;</h3></button></p>
+            <p><button id="launch-button" class="rotating"><h3>&nbsp;&nbsp;Launch!&nbsp;&nbsp;</h3></button></p>
             <img style="height: 512px;" id="image" src="#"></img>
+        </div>
+        <div class="footer" align="center" style="margin-top: 2em;">
+            <i>made with 🪿 by GooseGirlGames</i>
         </div>
     </div>
 
