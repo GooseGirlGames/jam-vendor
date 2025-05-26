@@ -9,7 +9,13 @@
         "launch-command" : "./eVNgelic.sh",
         "window-class": "",
         "itch-url": "https://jreeee.itch.io/evngelic",
-        "image" : "https://img.itch.zone/aW1hZ2UvMzQ3MTIyNC8yMDcyOTE1Ny5wbmc=/original/PYApel.png",
+        "images" : [
+            "https://img.itch.zone/aW1hZ2UvMzQ3MTIyNC8yMDcyOTE1Ny5wbmc=/original/PYApel.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MTIyNC8yMDcyOTE1OS5wbmc=/original/Y081q4.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MTIyNC8yMDcyOTE2MC5wbmc=/original/9%2BiDBC.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MTIyNC8yMDcyOTE1OC5wbmc=/original/Jhcyyw.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MTIyNC8yMDcyOTE2MS5wbmc=/original/CVYBI4.png"
+        ],
         "zipfile": "eVNgelic-0.9a-pc.zip"
     },
     "nokittyno" : {
@@ -22,7 +28,12 @@
         "launch-command" : "wine No..Kitty..No!.exe",
         "window-class": "",
         "itch-url": "https://mubtasimsabik.itch.io/nokittyno",
-        "image" : "https://img.itch.zone/aW1hZ2UvMzQ2OTI0NC8yMDc1NDY4NS5wbmc=/original/nF7ngx.png",
+        "images" : [
+            "https://img.itch.zone/aW1hZ2UvMzQ2OTI0NC8yMDc1NDY4NS5wbmc=/original/nF7ngx.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ2OTI0NC8yMDc1MDkxMC5wbmc=/original/Ev5aY%2F.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ2OTI0NC8yMDc1MDkwOS5wbmc=/original/WJDsPl.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ2OTI0NC8yMDc1MDkxMi5wbmc=/original/vQs8TK.png"
+        ],
         "zipfile": "No..Kitty..No!.zip"
     },
     "duckaround" : {
@@ -35,7 +46,9 @@
         "launch-command" : "./DUCK_AROUND_FIND_OUT.x86_64",
         "window-class": "",
         "itch-url": "https://initialposition.itch.io/duck-around-and-find-out",
-        "image" : "https://img.itch.zone/aW1nLzIwNzEwMDcwLmpwZw==/original/j1hoGP.jpg",
+        "images" : [
+            "https://img.itch.zone/aW1nLzIwNzEwMDcwLmpwZw==/original/j1hoGP.jpg"
+        ],
         "zipfile": null
     },
     "bugaround" : {
@@ -48,7 +61,9 @@
         "launch-command" : "chromium --kiosk https://j0ye.itch.io/bug-around-and-find-out",
         "window-class": "",
         "itch-url": "https://j0ye.itch.io/bug-around-and-find-out",
-        "image" : "https://files.catbox.moe/j7roeo.png",
+        "images" : [
+            "https://files.catbox.moe/j7roeo.png"
+        ],
         "zipfile": null
     },
     "potionordie" : {
@@ -61,7 +76,11 @@
         "launch-command" : "wine BGJ2025.exe",
         "window-class": "",
         "itch-url": "https://punkartoffel.itch.io/potion-or-die",
-        "image" : "https://img.itch.zone/aW1hZ2UvMzQ3MTAwMS8yMDcxOTc3My5wbmc=/original/mC47uJ.png",
+        "images" : [
+            "https://img.itch.zone/aW1hZ2UvMzQ3MTAwMS8yMDcxOTc3My5wbmc=/original/mC47uJ.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MTAwMS8yMDcxOTkwNC5wbmc=/original/y3SPYn.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MTAwMS8yMDcxOTkwNS5wbmc=/original/UQeip5.png"
+        ],
         "zipfile": "PotionOrDie_v.1.1.zip"
     },
     "hermitofwittendorf" : {
@@ -74,7 +93,9 @@
         "launch-command" : "./TheHermitofWittendorf.py",
         "window-class": "",
         "itch-url": "https://harshith0g.itch.io/the-hermit-of-wittendorf",
-        "image" : "https://img.itch.zone/aW1nLzIwNzEwMDc5LnBuZw==/original/LZJ0J%2F.png",
+        "images" : [
+            "https://img.itch.zone/aW1nLzIwNzEwMDc5LnBuZw==/original/LZJ0J%2F.png"
+        ],
         "zipfile": "TheHermitofWittendorf-1.0-pc.zip"
     },
     "bauhain" : {
@@ -87,7 +108,9 @@
         "launch-command" : "./haaaaaus.x86_64",
         "window-class": "",
         "itch-url": "https://loveandlizards.itch.io/bauhain",
-        "image" : "https://img.itch.zone/aW1nLzIwNzEwMjQ0LnBuZw==/original/0feQSS.png",
+        "images" : [
+            "https://img.itch.zone/aW1nLzIwNzEwMjQ0LnBuZw==/original/0feQSS.png"
+        ],
         "zipfile": "hausjaingame.zip"
     },
     "babahaus" : {
@@ -100,7 +123,11 @@
         "launch-command" : "wine './Baba Haus.exe'",
         "window-class": "",
         "itch-url": "https://chriskrise.itch.io/baba-haus",
-        "image" : "https://img.itch.zone/aW1hZ2UvMzQ3MDQ5Ny8yMDczMzM4NS5wbmc=/original/x7Jp75.png",
+        "images" : [
+            "https://img.itch.zone/aW1hZ2UvMzQ3MDQ5Ny8yMDczMzM4NS5wbmc=/original/x7Jp75.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MDQ5Ny8yMDczMzM4NC5wbmc=/original/ZgW0YE.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MDQ5Ny8yMDcxMDUwOS5wbmc=/original/NAbOSX.png"
+        ],
         "zipfile": "BabaHaus.zip"
     },
     "filinchen" : {
@@ -113,7 +140,10 @@
         "launch-command" : "./Filinchen.x86_64",
         "window-class": "",
         "itch-url": "https://jannnis.itch.io/filinchen",
-        "image" : "https://img.itch.zone/aW1hZ2UvMzQ3MTEzMS8yMDcwOTczNC5wbmc=/original/%2Fo%2FYR0.png",
+        "images" : [
+            "https://img.itch.zone/aW1hZ2UvMzQ3MTEzMS8yMDcwOTczNC5wbmc=/original/%2Fo%2FYR0.png",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MTEzMS8yMDcxMDAxMy5wbmc=/original/f8Knx2.png"
+        ],
         "zipfile": "filinchen-linux.zip"
     },
     "toilandtrouble" : {
@@ -126,7 +156,12 @@
         "launch-command" : "wine ./ToilAndTrouble.exe",
         "window-class": "",
         "itch-url": "https://stepheight.itch.io/toil-and-trouble",
-        "image" : "https://img.itch.zone/aW1nLzIwNzIyMTEzLmpwZw==/original/KqsOlo.jpg",
+        "images" : [
+            "https://img.itch.zone/aW1nLzIwNzIyMTEzLmpwZw==/original/KqsOlo.jpg",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MjY4NC8yMDcxOTQyNy5qcGc=/original/bYpXiT.jpg",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MjY4NC8yMDcxOTQxMS5qcGc=/original/VAh1Ao.jpg",
+            "https://img.itch.zone/aW1hZ2UvMzQ3MjY4NC8yMDcxOTEzMS5wbmc=/original/fMSkFx.png"
+        ],
         "zipfile": "ToilAndTrouble_Windows.zip"
     },
     "lust4loot" : {
@@ -139,7 +174,9 @@
         "launch-command" : "chromium --kiosk https://gorgeousone.itch.io/lust-4-loot",
         "window-class": "",
         "itch-url": "https://gorgeousone.itch.io/lust-4-loot",
-        "image" : "https://img.itch.zone/aW1nLzE1NzAxMDIyLnBuZw==/original/RaVTqq.png",
+        "images" : [
+            "https://img.itch.zone/aW1nLzE1NzAxMDIyLnBuZw==/original/RaVTqq.png"
+        ],
         "zipfile": null
     },
     "junkbot" : {
@@ -152,7 +189,9 @@
         "launch-command" : "wine './Bauhaus Gamejam 2024.exe'",
         "window-class": "",
         "itch-url": "https://ibroketheworld.itch.io/junkbot",
-        "image" : "https://img.itch.zone/aW1nLzE1NjgwNjI1LnBuZw==/347x500/jA%2FsNa.png",
+        "images" : [
+            "https://img.itch.zone/aW1nLzE1NjgwNjI1LnBuZw==/347x500/jA%2FsNa.png"
+        ],
         "zipfile": "JunkBot.zip"
     },
     "afah" : {
@@ -165,7 +204,10 @@
         "launch-command" : "./afah.x86_64",
         "window-class": "",
         "itch-url": "https://loveandlizards.itch.io/afah",
-        "image" : "https://img.itch.zone/aW1hZ2UvMjYzMTQ3OS8xNTczNTcwNC5wbmc=/original/h067Ip.png",
+        "images" : [
+            "https://img.itch.zone/aW1hZ2UvMjYzMTQ3OS8xNTczNTcwNC5wbmc=/original/h067Ip.png",
+            "https://img.itch.zone/aW1hZ2UvMjYzMTQ3OS8xNTczNTcwNS5wbmc=/original/cGejij.png"
+        ],
         "zipfile": "more_cats.zip"
     },
     "magpile" : {
@@ -178,7 +220,10 @@
         "launch-command" : "wine ./Magpile.exe",
         "window-class": "",
         "itch-url": "https://toratios.itch.io/magpile",
-        "image" : "https://img.itch.zone/aW1hZ2UvMjYzMTQxNy8xNTY4MDU3Mi5wbmc=/original/QsCLdX.png",
+        "images" : [
+            "https://img.itch.zone/aW1hZ2UvMjYzMTQxNy8xNTY4MDU3Mi5wbmc=/original/QsCLdX.png",
+            "https://img.itch.zone/aW1hZ2UvMjYzMTQxNy8xNTY4MDU1MS5wbmc=/original/NVarus.png"
+        ],
         "zipfile": "Magpile_0.2.zip"
     },
     "remodeluxe" : {
@@ -191,7 +236,10 @@
         "launch-command" : "wine ./remo.exe",
         "window-class": "",
         "itch-url": "https://milorico.itch.io/remo-deluxe",
-        "image" : "https://img.itch.zone/aW1hZ2UvMjAyMDU2OS8xMTg4NDI1Ny5wbmc=/original/NZF8hE.png",
+        "images" : [
+            "https://img.itch.zone/aW1hZ2UvMjAyMDU2OS8xMTg4NDI1Ny5wbmc=/original/NZF8hE.png",
+            "https://img.itch.zone/aW1hZ2UvMjAyMDU2OS8xMTg4NDI1Ni5wbmc=/original/x9%2F8%2FB.png"
+        ],
         "zipfile": "v8.zip"
     },
     "kawaiirusrex" : {
@@ -204,7 +252,9 @@
         "launch-command" : "wine ./Kawaiirus-REX.exe",
         "window-class": "",
         "itch-url": "https://kyukado.itch.io/kawaiirus-rex",
-        "image" : "https://img.itch.zone/aW1nLzExODg0MDU1LnBuZw==/347x500/1RfUb2.png",
+        "images" : [
+            "https://img.itch.zone/aW1nLzExODg0MDU1LnBuZw==/347x500/1RfUb2.png"
+        ],
         "zipfile": "Kawaiirus-REX.zip"
     },
     "jurassicheartthrob" : {
@@ -217,7 +267,9 @@
         "launch-command" : "./BuiidJurassic.x86_64",
         "window-class": "",
         "itch-url": "https://loveandlizards.itch.io/jurassic-heartthrob",
-        "image" : "https://img.itch.zone/aW1nLzExODkyNzkzLnBuZw==/original/LKI9Jc.png",
+        "images" : [
+            "https://img.itch.zone/aW1nLzExODkyNzkzLnBuZw==/original/LKI9Jc.png"
+        ],
         "zipfile": "dinolove_linuxFinal2.zip"
     },
     "daddylongneck" : {
@@ -230,7 +282,9 @@
         "launch-command" : "./daddy-longneck-1b.x86_64",
         "window-class": "",
         "itch-url": "https://mielein.itch.io/daddylongneck",
-        "image" : "https://img.itch.zone/aW1nLzExODkyNjA2LnBuZw==/original/%2B6PZ3M.png",
+        "images" : [
+            "https://img.itch.zone/aW1nLzExODkyNjA2LnBuZw==/original/%2B6PZ3M.png"
+        ],
         "zipfile": "daddy-longneck-1b-linux.zip"
     }
 }
