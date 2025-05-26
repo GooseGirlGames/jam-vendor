@@ -103,7 +103,7 @@
         "creators": "Tarek, Paul, Jakob, Felix, Anton",
         "year": 2025,
         "short-description": "",
-        "description": "",
+        "description": "You're the bouncer at the infamous BauHain club!\nFuck around with whomever you let in and find out...",
         "launch-dir" : "./games/bauhain/build/Bauhain-a7942aa-linux",
         "launch-command" : "./Bauhain",
         "window-class": "",
