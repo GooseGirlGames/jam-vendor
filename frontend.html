@@ -7,28 +7,52 @@
     <style>
         body {
             font-family: mono;
+            background-color: #fdf;
         }
         ul {
           columns: 3;
           -webkit-columns: 3;
           -moz-columns: 3;
         }
+        li {
+            margin-bottom: 1em;
+        }
+        .game-tile {
+            border: 1px dashed #f0f;
+            list-style-type: none;
+            background-color: #fbf;
+        }
+        #games-list {
+            width: 66%;
+            float: left;
+        }
+        #game-info {
+            width: 33%;
+            display: inline;
+            float: right;
+        }
     </style>
 </head>
 <body>
     <div id="overview">
         <a><h1>Bauhaus Game Jam</h1></a>
-        <ul id="games">
-        </ul>
-        <img style="height: 256px;" id="hover-image" src="#"></img>
+        <div id="games-list">
+            <ul id="games">
+            </ul>
+        </div>
+        <div id="game-info">
+            <img style="width: 80%;" id="hover-image" src="#"></img>
+        </div>
     </div>
     <div id="detail">
         <a href="#"><h1>Bauhaus Game Jam</h1></a>
-        <h2 id="display-name">display-name</h2>
-        <p id="description">description</p>
-        <p><i id="created-by">created-by</i></p>
-        <p><button id="launch-button"><h3>&nbsp;Launch!&nbsp;</h3></button></p>
-        <img style="height: 512px;" id="image" src="#"></img>
+        <div class="game-tile">
+            <h2 id="display-name">display-name</h2>
+            <p id="description">description</p>
+            <p><i id="created-by">created-by</i></p>
+            <p><button id="launch-button"><h3>&nbsp;Launch!&nbsp;</h3></button></p>
+            <img style="height: 512px;" id="image" src="#"></img>
+        </div>
     </div>
 
     <script>
@@ -43,12 +67,15 @@
         function addGames(games) {
             for (const [k, v] of Object.entries(games)) {
                 let game_html = `
-                    <li>
-                    <h2><a
-                        href="#${k}"
+                    <li
+                        class="game-tile"
                         onmouseover="updateImage('${v['image']}')"
                         onmouseleave="updateImage('#')"
-                        onclick="sendCommand('DONT launch ${k}')">
+                        onclick="sendCommand('DONT launch ${k}')"
+                    >
+                    <h2><a
+                        href="#${k}"
+                    >
                     ${v["display-name"]}</a></h2>
                     <p>${v["short-description"]}
                     </p>
@@ -60,8 +87,13 @@
         }
 
         function updateImage(src) {
-            console.log("srccc" + src);
-            document.getElementById("hover-image").src = src;
+            const img = document.getElementById("hover-image");
+            img.src = src;
+            if (src === "#") {
+                img.style.display = "none";
+            } else {
+                img.style.display = "block";
+            }
         }
 
         function setupSite() {
@@ -137,6 +169,7 @@
 
         setupSite();
         updateUI();
+        updateImage("#");
         checkHealth();
         setInterval(checkHealth, 1000);
 
