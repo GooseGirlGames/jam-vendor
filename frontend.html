@@ -8,6 +8,7 @@
         body {
             font-family: mono;
             background-color: #fdf;
+            font-size: 1.5em;
         }
         ul {
           columns: 3;
@@ -26,6 +27,9 @@
             background-color: #fbf;
             padding-left: 1em;
         }
+        #detail {
+            font-size: 1.5em;
+        }
         #qrcode {
             float: right;
             margin: 2em;
@@ -37,11 +41,12 @@
             font-size: 0.75em;
         }
         #games-list {
-            width: 66%;
+            width: 65%;
             float: left;
         }
         #game-info {
-            width: 33%;
+            padding-top: 1em;
+            width: 32%;
             display: inline;
             float: right;
         }
@@ -52,6 +57,10 @@
         }
         .rotating {
             animation: rotate 0.4s ease-in-out alternate infinite;
+        }
+        #launch-button {
+            font-size: 52px;
+            padding: 0.25em;
         }
 
     </style>
@@ -66,8 +75,9 @@
                 <i>made with 🪿 by GooseGirlGames</i>
             </div>
         </div>
-        <div id="game-info">
+        <div id="game-info" class="game-tile">
             <img style="width: 80%;" id="hover-image" src="#"></img>
+            <p id="hover-description"></p>
         </div>
     </div>
     <div id="detail">
@@ -76,8 +86,8 @@
             <div id="qrcode"></div>
             <h2 id="display-name">display-name</h2>
             <p id="description">description</p>
+            <p><button id="launch-button" class="rotating">Launch!</button></p>
             <p><i id="created-by">created-by</i></p>
-            <p><button id="launch-button" class="rotating"><h3>&nbsp;&nbsp;Launch!&nbsp;&nbsp;</h3></button></p>
             <p><a id="itch" href="#">itch</p>
             <img style="height: 512px;" id="image" src="#"></img>
         </div>
@@ -102,7 +112,7 @@
                 let game_html = `
                     <li
                         class="game-tile"
-                        onmouseover="updateImage('${v['image']}')"
+                        onmouseover="updateImage('${k}')"
                         onmouseleave="updateImage('#')"
                         onclick="sendCommand('DONT launch ${k}')"
                     >
@@ -119,14 +129,22 @@
             }
         }
 
-        function updateImage(src) {
-            const img = document.getElementById("hover-image");
-            img.src = src;
-            if (src === "#") {
-                img.style.display = "none";
-            } else {
-                img.style.display = "block";
+        function updateImage(game) {
+            const side = document.getElementById("game-info");
+
+            if (game === "#") {
+                side.style.display = "none";
+                return;
             }
+            side.style.display = "block";
+
+            game = games[game];
+            const src = game["image"];
+            const desc = game["description"];
+            const img = document.getElementById("hover-image");
+
+            img.src = src;
+            document.getElementById("hover-description").innerHTML = desc.replace("\n", "<br/><br/>");
         }
 
         function setupSite() {
@@ -140,8 +158,8 @@
 
             qrcode = new QRCode(document.getElementById("qrcode"), {
                 text: "#",
-                width: 128,
-                height: 128,
+                width: 128 * 2,
+                height: 128 * 2,
                 colorDark : "#626",
                 colorLight : "#fbf",
                 correctLevel : QRCode.CorrectLevel.H
@@ -199,7 +217,7 @@
                 div_detail.style.display = "block";
                 const g = games[game];
                 document.getElementById("display-name").innerHTML = `${g["display-name"]} (${g["year"]})`;
-                document.getElementById("description").innerHTML = games[game]["description"];
+                document.getElementById("description").innerHTML = games[game]["description"].replace("\n", "<br/><br/>");
                 document.getElementById("created-by").innerHTML = "created by " + games[game]["creators"];
                 document.getElementById("image").src = games[game]["image"];
                 document.getElementById("itch").href = games[game]["itch-url"];
