@@ -102,7 +102,7 @@
     },
     "bauhain" : {
         "display-name": "BauHain",
-        "creators": "Tarek, Paul, Jakob, Felix, Anton",
+        "creators": "Tarek, Paul, Arda, Jakob, Felix, Anton",
         "year": 2025,
         "short-description": "",
         "description": "You're the bouncer at the infamous BauHain club!\nFuck around with whomever you let in and find out...",
@@ -111,7 +111,9 @@
         "window-class": "",
         "itch-url": "https://loveandlizards.itch.io/bauhain",
         "images" : [
-            "https://img.itch.zone/aW1nLzIwNzEwMjQ0LnBuZw==/original/0feQSS.png"
+            "https://img.itch.zone/aW1nLzIwNzEwMjQ0LnBuZw==/original/0feQSS.png",
+            "img/bauhain1.png",
+            "img/bauhain2.png"
         ],
         "zipfile": "Bauhain-a7942aa-linux.zip"
     },
@@ -177,7 +179,8 @@
         "window-class": "",
         "itch-url": "https://gorgeousone.itch.io/lust-4-loot",
         "images" : [
-            "https://img.itch.zone/aW1nLzE1NzAxMDIyLnBuZw==/original/RaVTqq.png"
+            "https://img.itch.zone/aW1nLzE1NzAxMDIyLnBuZw==/original/RaVTqq.png",
+            "img/loot.png"
         ],
         "zipfile": null
     },
@@ -192,13 +195,14 @@
         "window-class": "",
         "itch-url": "https://ibroketheworld.itch.io/junkbot",
         "images" : [
+            "img/junk.png",
             "https://img.itch.zone/aW1nLzE1NjgwNjI1LnBuZw==/347x500/jA%2FsNa.png"
         ],
         "zipfile": "JunkBot.zip"
     },
     "afah" : {
         "display-name": "AFAH",
-        "creators": "Tarek, Jakob, Felix, Anton",
+        "creators": "Tarek, Arda, Jakob, Felix, Anton",
         "year": 2024,
         "short-description": "",
         "description": "content warning: deteriorating mental health",
@@ -224,6 +228,7 @@
         "itch-url": "https://toratios.itch.io/magpile",
         "images" : [
             "https://img.itch.zone/aW1hZ2UvMjYzMTQxNy8xNTY4MDU3Mi5wbmc=/original/QsCLdX.png",
+            "img/magpile.png",
             "https://img.itch.zone/aW1hZ2UvMjYzMTQxNy8xNTY4MDU1MS5wbmc=/original/NVarus.png"
         ],
         "zipfile": "Magpile_0.2.zip"
@@ -239,7 +244,7 @@
         "window-class": "",
         "itch-url": "https://milorico.itch.io/remo-deluxe",
         "images" : [
-            "https://img.itch.zone/aW1hZ2UvMjAyMDU2OS8xMTg4NDI1Ny5wbmc=/original/NZF8hE.png",
+            "img/remo.png",
             "https://img.itch.zone/aW1hZ2UvMjAyMDU2OS8xMTg4NDI1Ni5wbmc=/original/x9%2F8%2FB.png"
         ],
         "zipfile": "v8.zip"
@@ -255,7 +260,8 @@
         "window-class": "",
         "itch-url": "https://kyukado.itch.io/kawaiirus-rex",
         "images" : [
-            "https://img.itch.zone/aW1nLzExODg0MDU1LnBuZw==/347x500/1RfUb2.png"
+            "https://img.itch.zone/aW1nLzExODg0MDU1LnBuZw==/347x500/1RfUb2.png",
+            "img/rex.png"
         ],
         "zipfile": "Kawaiirus-REX.zip"
     },
@@ -264,7 +270,7 @@
         "creators": "Tarek, Fionn, Jakob, Felix, Max",
         "year": 2023,
         "short-description": "",
-        "description": "A dino-dating-driving game.",
+        "description": "A dino-dating-driving game.\nWASD to move, Q and E to smash into other dinos :)",
         "launch-dir" : "./games/jurassicheartthrob/linux",
         "launch-command" : "./BuiidJurassic.x86_64",
         "window-class": "",
@@ -285,7 +291,8 @@
         "window-class": "",
         "itch-url": "https://mielein.itch.io/daddylongneck",
         "images" : [
-            "https://img.itch.zone/aW1nLzExODkyNjA2LnBuZw==/original/%2B6PZ3M.png"
+            "https://img.itch.zone/aW1nLzExODkyNjA2LnBuZw==/original/%2B6PZ3M.png",
+            "img/neck.png"
         ],
         "zipfile": "daddy-longneck-1b-linux.zip"
     }
