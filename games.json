@@ -59,6 +59,7 @@
         "description": "",
         "launch-dir" : ".",
         "launch-command" : "chromium --kiosk https://j0ye.itch.io/bug-around-and-find-out",
+        "web-playable": true,
         "window-class": "",
         "itch-url": "https://j0ye.itch.io/bug-around-and-find-out",
         "images" : [
@@ -177,6 +178,7 @@
         "description": "Take the helm and steer your trusty ship through the dangerous waters of \"Lust 4 Loot\"!\nYou and a friend can compete against each other to be the fastest pirate to retrieve the loot from the sea and stow it away on your pirate island.\nGain an advantage by shooting your opponent with cannonballs so their booty falls back into the water. And play tactically - delivering more loot at once scores more points!",
         "launch-dir" : ".",
         "launch-command" : "chromium --kiosk https://gorgeousone.itch.io/lust-4-loot",
+        "web-playable": true,
         "window-class": "",
         "itch-url": "https://gorgeousone.itch.io/lust-4-loot",
         "images" : [

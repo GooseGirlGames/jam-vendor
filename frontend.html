@@ -304,7 +304,11 @@
                 }
 
                 if (!socket || socket.readyState != WebSocket.OPEN) {
-                    btn.innerHTML = "Get on itch.io!";
+                    if (g.hasOwnProperty("web-playable") && g["web-playable"]) {
+                        btn.innerHTML = "Play on itch.io!";
+                    } else {
+                        btn.innerHTML = "Get on itch.io!";
+                    }
                     btn.onclick = () => {
                         window.location.href = g["itch-url"];
                     }
