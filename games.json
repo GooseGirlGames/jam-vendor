@@ -92,7 +92,7 @@
         "short-description": "",
         "description": "⚠️ content warning: violence, sexual themes ⚠️",
         "launch-dir" : "./games/hermitofwittendorf/TheHermitofWittendorf-1.0-pc",
-        "launch-command" : "./TheHermitofWittendorf.py",
+        "launch-command" : "./TheHermitofWittendorf.sh",
         "window-class": "",
         "itch-url": "https://harshith0g.itch.io/the-hermit-of-wittendorf",
         "images" : [
