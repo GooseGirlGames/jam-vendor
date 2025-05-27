@@ -295,6 +295,12 @@
                     }
                 }
                 document.getElementById("images").innerHTML = images;
+
+                if (g["launch-disabled"]) {
+                    const btn = document.getElementById("launch-button")
+                    btn.innerHTML = "unavailable, sorry :(";
+                    btn.disabled = true;
+                }
             }
         }
 

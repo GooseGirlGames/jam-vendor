@@ -158,6 +158,7 @@
         "description": "The witch has left you in charge of making potions for her customers while she goes to an important business meeting. Luckily you have all the ingredients and- wait. Where's the recipe book? Oh well, you'll just have to wing it!\nLuckily customers aren't too picky about getting the right potion, but they don't pay as well if they get the wrong potion.\nTry to keep the shop running until the witch returns!",
         "launch-dir" : "./games/toilandtrouble",
         "launch-command" : "wine ./ToilAndTrouble.exe",
+        "launch-disabled": true,
         "window-class": "",
         "itch-url": "https://stepheight.itch.io/toil-and-trouble",
         "images" : [
