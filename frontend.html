@@ -206,6 +206,7 @@
                 .then(out => {
                     games = out;
                     addGames(out);
+                    updateUI();
                 })
                 .catch(err => console.log(err));
 
@@ -296,16 +297,22 @@
                 }
                 document.getElementById("images").innerHTML = images;
 
+                const btn = document.getElementById("launch-button");
                 if (g["launch-disabled"]) {
-                    const btn = document.getElementById("launch-button")
                     btn.innerHTML = "unavailable, sorry :(";
                     btn.disabled = true;
+                }
+
+                if (!socket || socket.readyState != WebSocket.OPEN) {
+                    btn.innerHTML = "Get on itch.io!";
+                    btn.onclick = () => {
+                        window.location.href = g["itch-url"];
+                    }
                 }
             }
         }
 
         setupSite();
-        updateUI();
         updateImage("#");
         checkHealth();
         setInterval(checkHealth, 1000);
