@@ -43,7 +43,7 @@
         "short-description": "",
         "description": "DAFO THE DUCK has committed a crime. Crime is illegal in Duck City. The law is right behind DAFO.",
         "launch-dir" : "./games",
-        "launch-command" : "./DUCK_AROUND_FIND_OUT.x86_64",
+        "launch-command" : "./DUCK_AROUND_FIND_OUT.x86_64 -f",
         "window-class": "",
         "itch-url": "https://initialposition.itch.io/duck-around-and-find-out",
         "images" : [
@@ -141,7 +141,7 @@
         "short-description": "",
         "description": "Meow meow meow",
         "launch-dir" : "./games/filinchen",
-        "launch-command" : "./Filinchen.x86_64",
+        "launch-command" : "./Filinchen.x86_64 -f",
         "window-class": "",
         "itch-url": "https://jannnis.itch.io/filinchen",
         "images" : [
