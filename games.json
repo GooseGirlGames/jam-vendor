@@ -1,7 +1,7 @@
 {
     "evngelic" : {
         "display-name": "eVNgelic",
-        "creators": "Jeremias, Lotte",
+        "creators": "Jeremias, Lotte, Yuki",
         "year": 2025,
         "short-description": "",
         "description": "You find yourself in front of a strange looking building, having seemingly lost most -if not all- of your memories.\nDrawn in by the building, you encounter characters that might help you get back your memories, or at least find out where you are.",
@@ -285,7 +285,7 @@
     },
     "daddylongneck" : {
         "display-name": "DaddyLongNeck",
-        "creators": "Jeremias, Marvin, Charlotte, Ilas, Marie",
+        "creators": "Jeremias, Marvin, Lotte, Ilas, Marie",
         "year": 2023,
         "short-description": "",
         "description": "A simple side-scroller where you as a Dino eat nuggies while avoiding the other items.",
