@@ -201,7 +201,7 @@
         }
 
         function setupSite() {
-            fetch("/games.json")
+            fetch("./games.json")
                 .then(res => res.json())
                 .then(out => {
                     games = out;
