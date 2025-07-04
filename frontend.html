@@ -124,12 +124,14 @@
     <div id="detail">
         <a id="back" href="#"><h1>⟸ Bauhaus Game Jam</h1></a>
         <div class="game-tile">
-            <div id="qrcode"></div>
+            <div id="qrcode">get on itch.io:</div>
             <h2 id="display-name">display-name</h2>
             <p id="description">description</p>
             <p><button id="launch-button" class="rotating">Launch!</button></p>
-            <p><i id="created-by">created-by</i>&nbsp;&bullet;&nbsp;
-            available on <a id="itch" href="#">itch</a></p>
+            <p>
+                <i id="created-by">created-by</i>
+                <span id="available-on">&nbsp;&bullet;&nbsp;available on <a id="itch" href="#">itch</a></span>
+            </p>
             <div id="images"></div>
         </div>
     </div>
@@ -289,6 +291,7 @@
                 }
                 qrcode.clear();
                 qrcode.makeCode(g["itch-url"]);
+                document.getElementById("available-on").style.display = (socket && socket.readyState == WebSocket.OPEN) ? "none" : "inline";
 
                 let images = "";
                 let i = 0;
