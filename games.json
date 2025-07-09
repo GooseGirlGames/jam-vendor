@@ -179,7 +179,7 @@
         "launch-dir" : "./games/offthetable/lin_build",
         "launch-command" : "completely-of-the-table_linux.x86_64",
         "window-class": "",
-        "itch-url": "https://fionn-erickson.itch.io/com",
+        "itch-url": "https://fionn-erickson.itch.io/completely-off-the-table",
         "images" : [
             "https://img.itch.zone/aW1nLzIyMDYzMjQ0LnBuZw==/347x500/JWZ55p.png",
             "https://img.itch.zone/aW1hZ2UvMzcwNzUzMy8yMjA2MzQ3OS5wbmc=/original/2rI%2FEn.png"
