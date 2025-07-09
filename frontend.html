@@ -324,6 +324,29 @@
             }
         }
 
+        let idle_timer = 0;
+        const idle_timer_interval = 1000;
+
+        function reset_idle_timer() {
+            idle_timer = 0;
+        }
+
+        function update_idle_timer() {
+            idle_timer += idle_timer_interval;
+            if (idle_timer >= 5000) {
+                updateImage("#");
+            }
+            if (idle_timer >= 30000) {
+                window.location.hash = "#";
+                idle_timer = 0;
+            }
+        }
+
+        window.onload = () => {
+            document.onmousemove = reset_idle_timer;
+            setInterval(update_idle_timer, idle_timer_interval);
+        };
+
         setupSite();
         updateImage("#");
         checkHealth();
