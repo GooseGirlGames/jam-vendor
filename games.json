@@ -170,6 +170,22 @@
         ],
         "zipfile": "ToilAndTrouble_Windows.zip"
     },
+    "offthetable" : {
+        "display-name": "Completely Off The Table",
+        "creators": "Dave, Fionn, Marie, Marvin, Mona",
+        "year": 2025,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "./games/offthetable/lin_build",
+        "launch-command" : "completely-of-the-table_linux.x86_64",
+        "window-class": "",
+        "itch-url": "https://fionn-erickson.itch.io/com",
+        "images" : [
+            "https://img.itch.zone/aW1nLzIyMDYzMjQ0LnBuZw==/347x500/JWZ55p.png",
+            "https://img.itch.zone/aW1hZ2UvMzcwNzUzMy8yMjA2MzQ3OS5wbmc=/original/2rI%2FEn.png"
+        ],
+        "zipfile": "completely-of-the-table-linux.zip"
+    },
     "lust4loot" : {
         "display-name": "Lust 4 Loot",
         "creators": "Aaron, Daniel, Nagham, Patrick",
@@ -298,21 +314,5 @@
             "img/neck.png"
         ],
         "zipfile": "daddy-longneck-1b-linux.zip"
-    },
-    "offthetable" : {
-        "display-name": "Completely Off The Table",
-        "creators": "Dave, Fionn, Marie, Marvin, Mona",
-        "year": 2025,
-        "short-description": "",
-        "description": "",
-        "launch-dir" : "./games/offthetable/lin_build",
-        "launch-command" : "completely-of-the-table_linux.x86_64",
-        "window-class": "",
-        "itch-url": "https://fionn-erickson.itch.io/",
-        "images" : [
-            "https://img.itch.zone/aW1nLzIyMDYzMjQ0LnBuZw==/347x500/JWZ55p.png",
-            "img/offthetable.png"
-        ],
-        "zipfile": "completely-of-the-table-linux.zip"
     }
 }
