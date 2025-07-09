@@ -8,6 +8,7 @@ def download(im):
     ext = im.split(".")[-1]
     filename = sha256(im.encode()).hexdigest()[:32] + "." + ext
     print(f"curl -Lo img/{filename} '{im}'")
+    print(f"sed -i s#{im}#img/{filename}# games.json")
 
 
 with open("./games.json", "r") as f:
