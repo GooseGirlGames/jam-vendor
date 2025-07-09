@@ -298,5 +298,21 @@
             "img/neck.png"
         ],
         "zipfile": "daddy-longneck-1b-linux.zip"
+    },
+    "offthetable" : {
+        "display-name": "Completely Off The Table",
+        "creators": "Dave, Fionn, Marie, Marvin, Mona",
+        "year": 2025,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "./games/offthetable/lin_build",
+        "launch-command" : "completely-of-the-table_linux.x86_64",
+        "window-class": "",
+        "itch-url": "https://fionn-erickson.itch.io/",
+        "images" : [
+            "https://img.itch.zone/aW1nLzIyMDYzMjQ0LnBuZw==/347x500/JWZ55p.png",
+            "img/offthetable.png"
+        ],
+        "zipfile": "completely-of-the-table-linux.zip"
     }
 }
