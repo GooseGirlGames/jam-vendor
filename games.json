@@ -177,7 +177,7 @@
         "short-description": "",
         "description": "",
         "launch-dir" : "./games/offthetable/lin_build",
-        "launch-command" : "completely-of-the-table_linux.x86_64",
+        "launch-command" : "./completely-of-the-table_linux.x86_64",
         "window-class": "",
         "itch-url": "https://fionn-erickson.itch.io/completely-off-the-table",
         "images" : [
@@ -237,7 +237,7 @@
     },
     "magpile" : {
         "display-name": "Magpile",
-        "creators": "Max, Jannis",
+        "creators": "Max, Jannis, Liv",
         "year": 2024,
         "short-description": "",
         "description": "",
