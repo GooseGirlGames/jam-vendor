@@ -11,6 +11,8 @@
         "window-class": "",
         "itch-url": "https://jannnis.itch.io/a-further-component",
         "images" : [
+            "https://static.itch.io/images/loader.gif",
+            "https://img.itch.zone/aW1hZ2UvNDQ3MDY4Ny8yNjY1Mjk3MC5wbmc=/original/N8xJju.png"
         ],
         "zipfile": ""
     },
@@ -25,6 +27,7 @@
         "window-class": "",
         "itch-url": "https://jreeee.itch.io/ubert",
         "images" : [
+            "https://img.itch.zone/aW1nLzI2NjUxNjMxLnBuZw==/347x500/gN76Ah.png"
         ],
         "zipfile": ""
     },
@@ -39,6 +42,10 @@
         "window-class": "",
         "itch-url": "https://bl0bfisch.itch.io/only-downhell-from-here",
         "images" : [
+            "https://img.itch.zone/aW1nLzI2NjUwMzU4LnBuZw==/original/bTYp4M.png",
+            "https://img.itch.zone/aW1hZ2UvNDQ2OTc1My8yNjY1MDYxMy5wbmc=/original/2YdPrr.png",
+            "https://img.itch.zone/aW1hZ2UvNDQ2OTc1My8yNjY1MDYxNC5wbmc=/original/c%2F80sx.png",
+            "https://img.itch.zone/aW1hZ2UvNDQ2OTc1My8yNjY1MDYxMi5wbmc=/original/N%2BHeCX.png"
         ],
         "zipfile": ""
     },
@@ -53,6 +60,7 @@
         "window-class": "",
         "itch-url": "https://punkartoffel.itch.io/grab-that-egg",
         "images" : [
+            "https://img.itch.zone/aW1nLzI2NjQ5MzA5LnBuZw==/original/mfxvhL.png"
         ],
         "zipfile": ""
     },
@@ -68,6 +76,7 @@
         "window-class": "",
         "itch-url": "https://0hashtag0.itch.io/zu-verschenken",
         "images" : [
+            "https://img.itch.zone/aW1nLzI2NjUxNjA3LmpwZw==/original/jXPeiS.jpg"
         ],
         "zipfile": ""
     },
