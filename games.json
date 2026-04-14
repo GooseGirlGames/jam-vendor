@@ -1,4 +1,78 @@
 {
+
+    "afurthercomponent" : {
+        "display-name": "A Further Component",
+        "creators": "Liz, Karo, Alban, Jannis",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://jannnis.itch.io/a-further-component",
+        "images" : [
+        ],
+        "zipfile": ""
+    },
+    "ubert" : {
+        "display-name": "ubert",
+        "creators": "Jeremias, Lotte, Mona, Yuki",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://jreeee.itch.io/ubert",
+        "images" : [
+        ],
+        "zipfile": ""
+    },
+    "onlydownhell" : {
+        "display-name": "Only Downhell from here",
+        "creators": "Chris, Jakob, Methis, Max",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://bl0bfisch.itch.io/only-downhell-from-here",
+        "images" : [
+        ],
+        "zipfile": ""
+    },
+    "grabthategg" : {
+        "display-name": "grab that egg",
+        "creators": "Franzi, Neo, Noeme",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://punkartoffel.itch.io/grab-that-egg",
+        "images" : [
+        ],
+        "zipfile": ""
+    },
+
+    "zuverschenken" : {
+        "display-name": "Zu Verschenken",
+        "creators": "Anton, Harshith, Ian, Nils, Vanamali",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://0hashtag0.itch.io/zu-verschenken",
+        "images" : [
+        ],
+        "zipfile": ""
+    },
+
+
     "evngelic" : {
         "display-name": "eVNgelic",
         "creators": "Jeremias, Lotte, Yuki",
@@ -18,6 +92,7 @@
         ],
         "zipfile": "eVNgelic-0.9a-pc.zip"
     },
+
     "nokittyno" : {
         "display-name": "No..Kitty..No!",
         "creators": "Sabik, Zala",
