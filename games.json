@@ -11,8 +11,8 @@
         "window-class": "",
         "itch-url": "https://jannnis.itch.io/a-further-component",
         "images" : [
-            "https://static.itch.io/images/loader.gif",
-            "https://img.itch.zone/aW1hZ2UvNDQ3MDY4Ny8yNjY1Mjk3MC5wbmc=/original/N8xJju.png"
+            "img/596d42b8a17775bcb86a75c8a9f0c4f3.png",
+            "img/e4801ca28d8dacec47f3a77402580f00.png"
         ],
         "zipfile": ""
     },
@@ -27,7 +27,7 @@
         "window-class": "",
         "itch-url": "https://jreeee.itch.io/ubert",
         "images" : [
-            "https://img.itch.zone/aW1nLzI2NjUxNjMxLnBuZw==/347x500/gN76Ah.png"
+            "img/ba8dbc76fe9ae7030e58449d552849d8.png"
         ],
         "zipfile": ""
     },
@@ -42,10 +42,10 @@
         "window-class": "",
         "itch-url": "https://bl0bfisch.itch.io/only-downhell-from-here",
         "images" : [
-            "https://img.itch.zone/aW1nLzI2NjUwMzU4LnBuZw==/original/bTYp4M.png",
-            "https://img.itch.zone/aW1hZ2UvNDQ2OTc1My8yNjY1MDYxMy5wbmc=/original/2YdPrr.png",
-            "https://img.itch.zone/aW1hZ2UvNDQ2OTc1My8yNjY1MDYxNC5wbmc=/original/c%2F80sx.png",
-            "https://img.itch.zone/aW1hZ2UvNDQ2OTc1My8yNjY1MDYxMi5wbmc=/original/N%2BHeCX.png"
+            "img/592e9548e67d42997a14a50f38237701.png",
+            "img/242f47b51bbe083b2f6f116eab208618.png",
+            "img/7b707320f6292b86638f041518ead67d.png",
+            "img/e7025f7193fe793c97ca30ea8a45b02c.png"
         ],
         "zipfile": ""
     },
@@ -60,7 +60,7 @@
         "window-class": "",
         "itch-url": "https://punkartoffel.itch.io/grab-that-egg",
         "images" : [
-            "https://img.itch.zone/aW1nLzI2NjQ5MzA5LnBuZw==/original/mfxvhL.png"
+            "img/6ed1ff2883afb08c1f4296de7f5cf7f5.png"
         ],
         "zipfile": ""
     },
@@ -76,7 +76,7 @@
         "window-class": "",
         "itch-url": "https://0hashtag0.itch.io/zu-verschenken",
         "images" : [
-            "https://img.itch.zone/aW1nLzI2NjUxNjA3LmpwZw==/original/jXPeiS.jpg"
+            "img/06d558a91f90e54202432b19509f3927.jpg"
         ],
         "zipfile": ""
     },
