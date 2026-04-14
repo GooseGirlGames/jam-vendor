@@ -2,6 +2,7 @@
 
     "afurthercomponent" : {
         "display-name": "A Further Component",
+        "web-playable": true,
         "creators": "Liz, Karo, Alban, Jannis",
         "year": 2026,
         "short-description": "",
@@ -18,6 +19,7 @@
     },
     "ubert" : {
         "display-name": "ubert",
+        "web-playable": true,
         "creators": "Jeremias, Lotte, Mona, Yuki",
         "year": 2026,
         "short-description": "",
