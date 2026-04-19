@@ -1,4 +1,22 @@
 {
+    "egg-trap" : {
+        "display-name": "Egg Trap",
+        "web-playable": true,
+        "creators": "Ella, Natalie, Sophia, Paul, Aaron",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://gorgeousone.itch.io/egg-trap",
+        "images" : [
+            "https://img.itch.zone/aW1nLzI2Nzc2NjE1LnBuZw==/315x250%23c/JFk%2FT0.png"
+        ],
+        "zipfile": ""
+    },
+
+
 
     "afurthercomponent" : {
         "display-name": "A Further Component",
