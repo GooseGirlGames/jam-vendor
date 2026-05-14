@@ -25,8 +25,8 @@
         "year": 2026,
         "short-description": "",
         "description": "",
-        "launch-dir" : "./games/eggtrap/Egg*",
-        "launch-command" : "wine './Egg Trap.exe'",
+        "launch-dir" : "",
+        "launch-command" : "chromium --kiosk --ozone-platform=x11 https://gorgeousone.itch.io/egg-trap",
         "window-class": "",
         "itch-url": "https://gorgeousone.itch.io/egg-trap",
         "images" : [
@@ -45,7 +45,7 @@
         "short-description": "",
         "description": "",
         "launch-dir" : "",
-        "launch-command" : "chromium --kiosk https://jannnis.itch.io/a-further-component",
+        "launch-command" : "chromium --kiosk --ozone-platform=x11 https://jannnis.itch.io/a-further-component",
         "window-class": "",
         "itch-url": "https://jannnis.itch.io/a-further-component",
         "images" : [
@@ -62,7 +62,7 @@
         "short-description": "",
         "description": "",
         "launch-dir" : "",
-        "launch-command" : "chromium --kiosk https://jreeee.itch.io/ubert",
+        "launch-command" : "chromium --kiosk --ozone-platform=x11 https://jreeee.itch.io/ubert",
         "window-class": "",
         "itch-url": "https://jreeee.itch.io/ubert",
         "images" : [
@@ -181,7 +181,7 @@
         "short-description": "",
         "description": "",
         "launch-dir" : ".",
-        "launch-command" : "chromium --kiosk https://j0ye.itch.io/bug-around-and-find-out",
+        "launch-command" : "chromium --kiosk --ozone-platform=x11 https://j0ye.itch.io/bug-around-and-find-out",
         "web-playable": true,
         "window-class": "",
         "itch-url": "https://j0ye.itch.io/bug-around-and-find-out",
