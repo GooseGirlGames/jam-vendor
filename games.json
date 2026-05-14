@@ -45,7 +45,7 @@
         "short-description": "",
         "description": "",
         "launch-dir" : "",
-        "launch-command" : "",
+        "launch-command" : "chromium --kiosk https://jannnis.itch.io/a-further-component",
         "window-class": "",
         "itch-url": "https://jannnis.itch.io/a-further-component",
         "images" : [
@@ -62,7 +62,7 @@
         "short-description": "",
         "description": "",
         "launch-dir" : "",
-        "launch-command" : "",
+        "launch-command" : "chromium --kiosk https://jreeee.itch.io/ubert",
         "window-class": "",
         "itch-url": "https://jreeee.itch.io/ubert",
         "images" : [
@@ -76,8 +76,8 @@
         "year": 2026,
         "short-description": "",
         "description": "",
-        "launch-dir" : "",
-        "launch-command" : "",
+        "launch-dir" : "./games/onlydownhell/publish_downhell",
+        "launch-command" : "wine Downhell.exe",
         "window-class": "",
         "itch-url": "https://bl0bfisch.itch.io/only-downhell-from-here",
         "images" : [
@@ -86,7 +86,7 @@
             "img/7b707320f6292b86638f041518ead67d.png",
             "img/e7025f7193fe793c97ca30ea8a45b02c.png"
         ],
-        "zipfile": ""
+        "zipfile": "downhell.zip"
     },
     "grabthategg" : {
         "display-name": "grab that egg",
@@ -94,14 +94,14 @@
         "year": 2026,
         "short-description": "",
         "description": "",
-        "launch-dir" : "",
-        "launch-command" : "",
+        "launch-dir" : "./games/grabthategg",
+        "launch-command" : "wine 'Grab That Egg.exe'",
         "window-class": "",
         "itch-url": "https://punkartoffel.itch.io/grab-that-egg",
         "images" : [
             "img/6ed1ff2883afb08c1f4296de7f5cf7f5.png"
         ],
-        "zipfile": ""
+        "zipfile": "GrabThatEgg.zip"
     },
 
     "zuverschenken" : {
@@ -110,14 +110,14 @@
         "year": 2026,
         "short-description": "",
         "description": "",
-        "launch-dir" : "",
-        "launch-command" : "",
+        "launch-dir" : "./games/zuverschenken",
+        "launch-command" : "wine 'Zu Verschenken.exe'",
         "window-class": "",
         "itch-url": "https://0hashtag0.itch.io/zu-verschenken",
         "images" : [
             "img/06d558a91f90e54202432b19509f3927.jpg"
         ],
-        "zipfile": ""
+        "zipfile": null
     },
 
 
