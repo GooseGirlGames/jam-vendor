@@ -216,21 +216,6 @@
         ],
         "zipfile": "Kawaiirus-REX.zip"
     },
-    "jurassicheartthrob" : {
-        "display-name": "Jurassic Heartthrob",
-        "creators": "Tarek, Fionn, Jakob, Felix, Max",
-        "year": 2023,
-        "short-description": "",
-        "description": "A dino-dating-driving game.\nWASD to move, Q and E to smash into other dinos :)",
-        "launch-dir" : "./games/jurassicheartthrob/linux",
-        "launch-command" : "./BuiidJurassic.x86_64",
-        "window-class": "",
-        "itch-url": "https://loveandlizards.itch.io/jurassic-heartthrob",
-        "images" : [
-            "img/ecc321f229daa7adc588f81523b7cb7c.png"
-        ],
-        "zipfile": "dinolove_linuxFinal2.zip"
-    },
     "daddylongneck" : {
         "display-name": "DaddyLongNeck",
         "creators": "Jeremias, Marvin, Lotte, Ilas, Marie",
