@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -x
+
 GAME_DIR=./games
 
 function extract() {

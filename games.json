@@ -1,38 +1,38 @@
 {
-    "felix-inferno" : {
+    "felixinferno" : {
         "display-name": "Felix' Inferno",
         "creators": "felix, tarek, anton, jakob, fionn, philine, usama",
         "year": 2026,
         "short-description": "a labyrinthine point-and-click adventure created by love & lizards at bauhaus game jam 2026",
         "description": "",
-        "launch-dir" : "",
-        "launch-command" : "",
+        "launch-dir" : "./games/felixinferno",
+        "launch-command" : "./FelixInferno.x86_64",
         "window-class": "",
         "itch-url": "https://loveandlizards.itch.io/felix-inferno",
         "images" : [
-            "https://img.itch.zone/aW1hZ2UvNDQ5MzI4Mi8yNjc4ODAyOS5qcGc=/347x500/H%2BFail.jpg",
-            "https://img.itch.zone/aW1hZ2UvNDQ5MzI4Mi8yNjc4ODAzMC5qcGc=/347x500/wFn9SJ.jpg",
-            "https://img.itch.zone/aW1hZ2UvNDQ5MzI4Mi8yNjc4ODAzMS5qcGc=/347x500/L2EgNc.jpg"
+            "img/4ba1ab9ab84f883d1401c95a34463fac.jpg",
+            "img/59805d8b2a3d15552cf510a1b8629d19.jpg",
+            "img/6595ea505f82b149c8cbef12c17bc4ed.jpg"
         ],
-        "zipfile": ""
+        "zipfile": "felix-inferno-linux.zip"
     },
 
 
-    "egg-trap" : {
+    "eggtrap" : {
         "display-name": "Egg Trap",
         "web-playable": true,
         "creators": "Ella, Natalie, Sophia, Paul, Aaron",
         "year": 2026,
         "short-description": "",
         "description": "",
-        "launch-dir" : "",
-        "launch-command" : "",
+        "launch-dir" : "./games/eggtrap/Egg*",
+        "launch-command" : "wine './Egg Trap.exe'",
         "window-class": "",
         "itch-url": "https://gorgeousone.itch.io/egg-trap",
         "images" : [
-            "https://img.itch.zone/aW1nLzI2Nzc2NjE1LnBuZw==/315x250%23c/JFk%2FT0.png"
+            "img/7a4b7d9f73f6786254dd540848bbbd3f.png"
         ],
-        "zipfile": ""
+        "zipfile": "Egg Trap v1.0.zip"
     },
 
 
@@ -52,7 +52,7 @@
             "img/596d42b8a17775bcb86a75c8a9f0c4f3.png",
             "img/e4801ca28d8dacec47f3a77402580f00.png"
         ],
-        "zipfile": ""
+        "zipfile": null
     },
     "ubert" : {
         "display-name": "ubert",
@@ -68,7 +68,7 @@
         "images" : [
             "img/ba8dbc76fe9ae7030e58449d552849d8.png"
         ],
-        "zipfile": ""
+        "zipfile": null
     },
     "onlydownhell" : {
         "display-name": "Only Downhell from here",
