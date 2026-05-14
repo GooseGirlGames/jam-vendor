@@ -88,21 +88,6 @@
         ],
         "zipfile": "downhell.zip"
     },
-    "grabthategg" : {
-        "display-name": "grab that egg",
-        "creators": "Franzi, Neo, Noeme",
-        "year": 2026,
-        "short-description": "",
-        "description": "",
-        "launch-dir" : "./games/grabthategg",
-        "launch-command" : "wine 'Grab That Egg.exe'",
-        "window-class": "",
-        "itch-url": "https://punkartoffel.itch.io/grab-that-egg",
-        "images" : [
-            "img/6ed1ff2883afb08c1f4296de7f5cf7f5.png"
-        ],
-        "zipfile": "GrabThatEgg.zip"
-    },
 
     "zuverschenken" : {
         "display-name": "Zu Verschenken",
@@ -273,25 +258,6 @@
             "img/6c0cd3c348e401e12a371aea748c0ef6.png"
         ],
         "zipfile": "filinchen-linux.zip"
-    },
-    "toilandtrouble" : {
-        "display-name": "Toil and Trouble",
-        "creators": "Stepheight",
-        "year": 2025,
-        "short-description": "",
-        "description": "The witch has left you in charge of making potions for her customers while she goes to an important business meeting. Luckily you have all the ingredients and- wait. Where's the recipe book? Oh well, you'll just have to wing it!\nLuckily customers aren't too picky about getting the right potion, but they don't pay as well if they get the wrong potion.\nTry to keep the shop running until the witch returns!",
-        "launch-dir" : "./games/toilandtrouble",
-        "launch-command" : "wine ./ToilAndTrouble.exe",
-        "launch-disabled": true,
-        "window-class": "",
-        "itch-url": "https://stepheight.itch.io/toil-and-trouble",
-        "images" : [
-            "img/43b37a19c40c9f854bf478dd37cddfd5.jpg",
-            "img/9525d74f3cac64f58fcb77289c1c32de.jpg",
-            "img/827afdd5a59361f7c624761d51df3aa3.jpg",
-            "img/749d01a7b0849aed6767159d5a474547.png"
-        ],
-        "zipfile": "ToilAndTrouble_Windows.zip"
     },
     "offthetable" : {
         "display-name": "Completely Off The Table",
