@@ -1,4 +1,125 @@
 {
+    "felix-inferno" : {
+        "display-name": "Felix' Inferno",
+        "creators": "felix, tarek, anton, jakob, fionn, philine, usama",
+        "year": 2026,
+        "short-description": "a labyrinthine point-and-click adventure created by love & lizards at bauhaus game jam 2026",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://loveandlizards.itch.io/felix-inferno",
+        "images" : [
+            "https://img.itch.zone/aW1hZ2UvNDQ5MzI4Mi8yNjc4ODAyOS5qcGc=/347x500/H%2BFail.jpg",
+            "https://img.itch.zone/aW1hZ2UvNDQ5MzI4Mi8yNjc4ODAzMC5qcGc=/347x500/wFn9SJ.jpg",
+            "https://img.itch.zone/aW1hZ2UvNDQ5MzI4Mi8yNjc4ODAzMS5qcGc=/347x500/L2EgNc.jpg"
+        ],
+        "zipfile": ""
+    },
+
+
+    "egg-trap" : {
+        "display-name": "Egg Trap",
+        "web-playable": true,
+        "creators": "Ella, Natalie, Sophia, Paul, Aaron",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://gorgeousone.itch.io/egg-trap",
+        "images" : [
+            "https://img.itch.zone/aW1nLzI2Nzc2NjE1LnBuZw==/315x250%23c/JFk%2FT0.png"
+        ],
+        "zipfile": ""
+    },
+
+
+
+    "afurthercomponent" : {
+        "display-name": "A Further Component",
+        "web-playable": true,
+        "creators": "Liz, Karo, Alban, Jannis",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://jannnis.itch.io/a-further-component",
+        "images" : [
+            "img/596d42b8a17775bcb86a75c8a9f0c4f3.png",
+            "img/e4801ca28d8dacec47f3a77402580f00.png"
+        ],
+        "zipfile": ""
+    },
+    "ubert" : {
+        "display-name": "ubert",
+        "web-playable": true,
+        "creators": "Jeremias, Lotte, Mona, Yuki, Dave",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://jreeee.itch.io/ubert",
+        "images" : [
+            "img/ba8dbc76fe9ae7030e58449d552849d8.png"
+        ],
+        "zipfile": ""
+    },
+    "onlydownhell" : {
+        "display-name": "Only Downhell from here",
+        "creators": "Chris, Jakob, Methis, Max",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://bl0bfisch.itch.io/only-downhell-from-here",
+        "images" : [
+            "img/592e9548e67d42997a14a50f38237701.png",
+            "img/242f47b51bbe083b2f6f116eab208618.png",
+            "img/7b707320f6292b86638f041518ead67d.png",
+            "img/e7025f7193fe793c97ca30ea8a45b02c.png"
+        ],
+        "zipfile": ""
+    },
+    "grabthategg" : {
+        "display-name": "grab that egg",
+        "creators": "Franzi, Neo, Noeme",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://punkartoffel.itch.io/grab-that-egg",
+        "images" : [
+            "img/6ed1ff2883afb08c1f4296de7f5cf7f5.png"
+        ],
+        "zipfile": ""
+    },
+
+    "zuverschenken" : {
+        "display-name": "Zu Verschenken",
+        "creators": "Anton, Harshith, Ian, Nils, Vanamali",
+        "year": 2026,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : "",
+        "launch-command" : "",
+        "window-class": "",
+        "itch-url": "https://0hashtag0.itch.io/zu-verschenken",
+        "images" : [
+            "img/06d558a91f90e54202432b19509f3927.jpg"
+        ],
+        "zipfile": ""
+    },
+
 
     "evngelic" : {
         "display-name": "eVNgelic",
@@ -18,7 +139,58 @@
             "img/deb14b2373f0e465cc383199d3dd07f5.png"
         ],
         "zipfile": "eVNgelic-0.9a-pc.zip"
+    },
 
+    "nokittyno" : {
+        "display-name": "No..Kitty..No!",
+        "creators": "Sabik, Zala",
+        "year": 2025,
+        "short-description": "",
+        "description": "You are an alien space kitty, having just a regular day. Suddenly, you find yourself lost and alone.\nNow, you have to fuck around and find your way back to the mothership.",
+        "launch-dir" : "./games/nokittyno/No..Kitty..No!",
+        "launch-command" : "wine No..Kitty..No!.exe",
+        "window-class": "",
+        "itch-url": "https://mubtasimsabik.itch.io/nokittyno",
+        "images" : [
+            "img/bc54945b8adbfccd6e8f27050d1f729f.png",
+            "img/939915eed377794be71888908737f356.png",
+            "img/db9ed9f3b0571e57ab9665c2f51a7b37.png",
+            "img/8fd88efc71795dedf8198f5464b854c2.png"
+        ],
+        "zipfile": "No..Kitty..No!.zip"
+    },
+    "duckaround" : {
+        "display-name": "DUCK AROUND AND FIND OUT",
+        "creators": "Felix",
+        "year": 2025,
+        "short-description": "",
+        "description": "DAFO THE DUCK has committed a crime. Crime is illegal in Duck City. The law is right behind DAFO.",
+        "launch-dir" : "./games",
+        "launch-command" : "./DUCK_AROUND_FIND_OUT.x86_64 -f",
+        "window-class": "",
+        "itch-url": "https://initialposition.itch.io/duck-around-and-find-out",
+        "images" : [
+            "img/3da7eb1a8e9ded2a78c928317a20279e.jpg"
+        ],
+        "zipfile": null
+    },
+    "bugaround" : {
+        "display-name": "Bug around and find out",
+        "creators": "Daniele",
+        "year": 2025,
+        "short-description": "",
+        "description": "",
+        "launch-dir" : ".",
+        "launch-command" : "chromium --kiosk https://j0ye.itch.io/bug-around-and-find-out",
+        "web-playable": true,
+        "window-class": "",
+        "itch-url": "https://j0ye.itch.io/bug-around-and-find-out",
+        "images" : [
+            "img/bugaround1.png",
+            "img/bugaround0.png",
+            "img/bugaround2.png"
+        ],
+        "zipfile": null
     },
     "potionordie" : {
         "display-name": "Potion or Die!",
@@ -101,6 +273,25 @@
             "img/6c0cd3c348e401e12a371aea748c0ef6.png"
         ],
         "zipfile": "filinchen-linux.zip"
+    },
+    "toilandtrouble" : {
+        "display-name": "Toil and Trouble",
+        "creators": "Stepheight",
+        "year": 2025,
+        "short-description": "",
+        "description": "The witch has left you in charge of making potions for her customers while she goes to an important business meeting. Luckily you have all the ingredients and- wait. Where's the recipe book? Oh well, you'll just have to wing it!\nLuckily customers aren't too picky about getting the right potion, but they don't pay as well if they get the wrong potion.\nTry to keep the shop running until the witch returns!",
+        "launch-dir" : "./games/toilandtrouble",
+        "launch-command" : "wine ./ToilAndTrouble.exe",
+        "launch-disabled": true,
+        "window-class": "",
+        "itch-url": "https://stepheight.itch.io/toil-and-trouble",
+        "images" : [
+            "img/43b37a19c40c9f854bf478dd37cddfd5.jpg",
+            "img/9525d74f3cac64f58fcb77289c1c32de.jpg",
+            "img/827afdd5a59361f7c624761d51df3aa3.jpg",
+            "img/749d01a7b0849aed6767159d5a474547.png"
+        ],
+        "zipfile": "ToilAndTrouble_Windows.zip"
     },
     "offthetable" : {
         "display-name": "Completely Off The Table",
@@ -215,6 +406,21 @@
             "img/rex.png"
         ],
         "zipfile": "Kawaiirus-REX.zip"
+    },
+    "jurassicheartthrob" : {
+        "display-name": "Jurassic Heartthrob",
+        "creators": "Tarek, Fionn, Jakob, Felix, Max",
+        "year": 2023,
+        "short-description": "",
+        "description": "A dino-dating-driving game.\nWASD to move, Q and E to smash into other dinos :)",
+        "launch-dir" : "./games/jurassicheartthrob/linux",
+        "launch-command" : "./BuiidJurassic.x86_64",
+        "window-class": "",
+        "itch-url": "https://loveandlizards.itch.io/jurassic-heartthrob",
+        "images" : [
+            "img/ecc321f229daa7adc588f81523b7cb7c.png"
+        ],
+        "zipfile": "dinolove_linuxFinal2.zip"
     },
     "daddylongneck" : {
         "display-name": "DaddyLongNeck",
